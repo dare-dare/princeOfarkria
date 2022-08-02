@@ -135,7 +135,7 @@ main {
   margin-left: 4px;
 }
 hr {
-  width: 1140px;
+  max-width: 1140px;
   border-bottom: 1px solid #232323;
   border-top: 0;
   margin: 25px 0 15px;
