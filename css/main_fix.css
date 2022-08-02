@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: absolute;
+  top: 78px;
+  left: 0;
+  z-index: 50;
+
+  width: 100%;
+  padding: 0 91.5px 0 87px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-logo {
+  width: 384.7px;
+}
+.nav-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+.nav-icon.discord {
+  background: url("../image/desktop/discord_ico.png") center no-repeat;
+  background-size: cover;
+}
+.nav-icon.insta {
+  background: url("../image/desktop/insta_ico.png") center no-repeat;
+  background-size: cover;
+}
+.nav-icon.youtube {
+  background: url("../image/desktop/youtube_ico.png") center no-repeat;
+  background-size: cover;
+}
+.nav-icon.twitter {
+  background: url("../image/desktop/twitter_ico.png") center no-repeat;
+  background-size: cover;
+}
+.nav-icon.menu {
+  background: url("../image/desktop/menu_ico.png") center no-repeat;
+  background-size: cover;
+  margin-left: 46.5px;
+}
+.nav-icon + .nav-icon {
+  margin-left: 18px;
+}
+.nav.mobile > .logo {
+  width: 126.9px;
+  height: 36px;
+}
+
+footer {
+  background-color: #101010;
+  padding: 17px 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > .sns-icons {
+  display: none;
+}
+footer > .sns-icons > .nav-icon + .nav-icon {
+  margin-left: 10px;
+}
+footer > div {
+  flex: 1 0 auto;
+  text-align: center;
+}
+.footer-left {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #969696;
+}
+.footer-right {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #818181;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 23px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav,
+  .footer-left,
+  .sns-icons {
+    display: none;
+  }
+  nav {
+    top: 16px;
+    padding: 0 23px 0 20px;
+  }
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+  nav.mobile {
+    display: flex;
+  }
+  footer {
+    padding: 0 0 34px;
+    background-color: #050505;
+    flex-direction: column;
+  }
+
+  footer > .sns-icons {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .footer-right > span {
+    display: block;
+  }
+}
+
+/* page style */
+
+main {
+  position: relative;
+
+  background-color: #050505;
+  color: #fff;
+
+  padding: 78px 0 228px;
+}
+
+.bg {
+  background: url("../image/desktop/spot_bg.png") top center no-repeat;
+  background-size: contain;
+  position: relative;
+  min-height: 1210.6px;
+}
+.line {
+  z-index: 19;
+  padding: 150px;
+}
+.left-cube {
+  max-width: 292.8px;
+  max-height: 292.8px;
+  position: absolute;
+  left: 104.7px;
+  top: 600px;
+  z-index: 20;
+}
+.right-cube {
+  max-width: 162.6px;
+  max-height: 179.5px;
+  position: absolute;
+  right: 179.2px;
+  top: 134px;
+  z-index: 20;
+}
+.center-cube {
+  max-width: 833px;
+  max-height: 898px;
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+.bg > .contents {
+  position: absolute;
+  top: 274px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+}
+.welcome-title {
+  max-width: 831px;
+  max-height: 86px;
+}
+.welcome-title.mobile {
+  display: none;
+}
+.prince-img {
+  margin-top: 21px;
+  max-width: 809px;
+  max-height: 677.9px;
+}
+.enter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 330px;
+  max-height: 70px;
+}
+.bg > .contents > .text {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bdbdbd;
+  margin-top: -100px;
+}
+.bg > .contents > .text > p + p {
+  margin-top: 40px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contents > .number-icon {
+  width: 72px;
+  height: 72px;
+  margin: 2px 0 0;
+}
+.contents > .text {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: left;
+  max-width: 774px;
+  margin-top: 42px;
+}
+.contents > .button {
+  max-width: 330px;
+  max-height: 70px;
+  border-radius: 6px;
+  border-width: 1.5px;
+}
+.contents > .image1 {
+  max-width: 765.2px;
+  max-height: 473.8px;
+  margin: 77.3px 0 32.2px;
+}
+.contents > .image2 {
+  max-width: 713px;
+  max-height: 801px;
+  margin-top: 17px;
+}
+.contents > .image3 {
+  max-width: 537px;
+  max-height: 154px;
+  margin-top: -300px;
+  margin-bottom: 76px;
+}
+.play-text {
+  max-width: 321px;
+  margin: 135.8px 0 127.8px;
+}
+.game-info {
+  margin-top: 140px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 78px 0 228px 0;
+  }
+  .bg {
+    background-size: cover;
+  }
+  .center-cube {
+    width: 100%;
+  }
+  .contents {
+    width: 100%;
+  }
+  .bg > .contents > .text,
+  .contents > .text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  section:not(.bg),
+  .sns-icons,
+  .left-cube,
+  .text,
+  .welcome-title {
+    display: none;
+  }
+
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  main {
+    padding: 16px 0 24px;
+    flex: 1 1 auto;
+    height: calc(100vh - 115px);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .bg {
+    min-height: unset;
+  }
+  .right-cube {
+    max-width: 79px;
+    max-height: 79px;
+    top: -79px;
+    right: 0;
+  }
+  .center-cube {
+    max-width: 147px;
+    max-height: 158.5px;
+    top: 0;
+  }
+  .bg > .contents {
+    top: 30px;
+  }
+
+  .prince-img {
+    max-width: 289px;
+    max-height: 243px;
+  }
+  .welcome-title.mobile {
+    display: block;
+    max-width: 252px;
+    margin: -60px;
+  }
+  .enter-button {
+    top: unset;
+    bottom: -160px;
+  }
+}
