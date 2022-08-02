@@ -1,11 +1,14 @@
 .page-select {
   position: fixed !important;
   top: 0 !important;
-  right: 0 !important;
-  width: 50% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   margin: 16px !important;
   padding: 8px 16px !important;
   border: 1px solid #ccc !important;
   border-radius: 0 !important;
-  background: rgb(180 178 178 / 6%) !important;
+  background: rgb(0 0 0 / 37%) !important;
+  z-index: 100 !important;
+  color: #fff !important;
+  width: 30% !important;
 }
