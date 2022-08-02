@@ -31,8 +31,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
+        $("#includedContent").load("main_fix.html");
+
         $("select[name=pageSelect]").change(function () {
           let page = $(this).val();
+          console.log(page);
           $("#includedContent").load(page);
         });
       });
