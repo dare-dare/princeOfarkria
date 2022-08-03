@@ -22,18 +22,17 @@ a {
 }
 
 /* nav */
-
 nav {
   position: absolute;
   top: 78px;
   left: 0;
   z-index: 50;
 
-  width: 100%;
-  padding: 0 91.5px 0 87px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  padding: 0 91.5px 0 87px;
 }
 .nav-right {
   display: flex;
@@ -42,58 +41,72 @@ nav {
 .nav-logo {
   width: 384.7px;
 }
-.nav-icon {
+.sns-icon,
+.menu-icon {
   width: 36px;
   height: 36px;
   display: inline-block;
+  vertical-align: middle;
 }
-.nav-icon.discord {
+.sns-icon.discord {
   background: url("../image/desktop/discord_ico.png") center no-repeat;
   background-size: cover;
 }
-.nav-icon.insta {
+.sns-icon.insta {
   background: url("../image/desktop/insta_ico.png") center no-repeat;
   background-size: cover;
 }
-.nav-icon.youtube {
+.sns-icon.youtube {
   background: url("../image/desktop/youtube_ico.png") center no-repeat;
   background-size: cover;
 }
-.nav-icon.twitter {
+.sns-icon.twitter {
   background: url("../image/desktop/twitter_ico.png") center no-repeat;
   background-size: cover;
 }
-.nav-icon.menu {
+.menu-icon {
   background: url("../image/desktop/menu_ico.png") center no-repeat;
   background-size: cover;
-}
-.nav-icon > img {
-  width: 100%;
-  height: 100%;
-}
-.nav-icon + .nav-icon {
-  margin-left: 18px;
-}
-.menu {
   margin-left: 46.5px;
+}
+.sns-icon + .sns-icon {
+  margin-left: 10px;
 }
 .nav.mobile > .logo {
   width: 126.9px;
   height: 36px;
 }
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 23px 0 20px;
+  }
+}
+@media (max-width: 640px) {
+  nav,
+  nav > .sns-icons {
+    display: none;
+  }
+  nav {
+    top: 16px;
+    padding: 0 23px 0 20px;
+  }
+  nav.mobile {
+    display: flex;
+  }
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
 
 /* footer */
 
 footer {
-  background-color: #101010;
-  padding: 17px 0 25px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-}
-footer > .sns-icons {
-  display: none;
+  padding: 17px 0 25px;
+  background-color: #101010;
 }
 footer > div {
   flex: 1 1 auto;
@@ -102,62 +115,25 @@ footer > div {
 .footer-left {
   font-family: Roboto;
   font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: normal;
   color: #969696;
 }
 .footer-right {
   font-family: Inter;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
-  letter-spacing: normal;
   color: #818181;
 }
-footer > .sns-icons > .nav-icon + .nav-icon {
-  margin-left: 10px;
+footer > .sns-icons {
+  display: none;
 }
-
-/* media */
-
 .mobile {
   display: none;
 }
-
-@media (max-width: 1024px) {
-  nav {
-    padding: 0 23px 0 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  nav,
-  .footer-left,
-  nav > .sns-icons {
+@media (max-width: 640px) {
+  .footer-left {
     display: none;
-    padding: 0 23px 0 20px;
   }
-  nav {
-    top: 16px;
-    padding: 0 23px 0 20px;
-  }
-  nav > .nav-icon {
-    width: 24px;
-    height: 24px;
-  }
-  footer > .nav-icon {
-    width: 36px;
-    height: 36px;
-  }
-  nav.mobile {
-    display: flex;
-  }
-
   footer {
     padding: 0 0 34px;
     background-color: #050505;
@@ -172,6 +148,31 @@ footer > .sns-icons > .nav-icon + .nav-icon {
   }
 }
 
-.text-center {
-  text-align: center;
+/* buttons */
+.enter-button {
+  width: 330px;
+  height: 70px;
+
+  background: url("../image/desktop/Enter_btn.png") top center no-repeat;
+  background-size: contain;
+}
+.community-button {
+  width: 330px;
+  height: 70px;
+
+  background: url("../image/desktop/cnt_01_btn.png") top center no-repeat;
+  background-size: contain;
+}
+.game-start-button {
+  width: 330px;
+  height: 70px;
+
+  background: url("../image/desktop/Game_start_btn.png") top center no-repeat;
+  background-size: contain;
+}
+@media (max-width: 640px) {
+  .enter-button {
+    width: 290px;
+    height: 60px;
+  }
 }

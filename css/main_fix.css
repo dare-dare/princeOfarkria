@@ -1,53 +1,73 @@
 main {
   position: relative;
-
+  padding: 78px 0 228px;
   background-color: #050505;
   color: #fff;
-
-  padding: 78px 0 228px;
 }
 
 .bg {
   background: url("../image/desktop/spot_bg.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   min-height: 1210.6px;
 }
 .line {
-  z-index: 19;
-  padding: 150px;
-}
-.left-cube {
-  max-width: 292.8px;
-  max-height: 292.8px;
-  position: absolute;
-  left: 104.7px;
-  top: 600px;
-  z-index: 20;
-}
-.right-cube {
-  max-width: 162.6px;
-  max-height: 179.5px;
-  position: absolute;
-  right: 179.2px;
-  top: 134px;
+  background: url("../image/desktop/Ellipse_line.png") center no-repeat;
+  background-size: contain;
   z-index: 20;
 }
 .center-cube {
-  max-width: 833px;
-  max-height: 898px;
+  background: url("../image/desktop/cube_03.png") top center no-repeat;
+  background-size: contain;
+  width: 833px;
+  height: 898px;
+
   position: absolute;
-  top: 92px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 20;
+}
+.left-cube {
+  background: url("../image/desktop/cube_01.png") top center no-repeat;
+  background-size: contain;
+
+  width: 292.8px;
+  height: 292.8px;
+  position: absolute;
+  bottom: 40%;
+  left: -455px;
+  transform: translateY(50%);
+  z-index: 20;
+}
+.right-cube {
+  background: url("../image/desktop/cube_02.png") top center no-repeat;
+  background-size: contain;
+  width: 162.6px;
+  height: 179.5px;
+
+  position: absolute;
+  top: 0;
+  right: -348px;
+  z-index: 20;
+}
+.prince-img {
+  background: url("../image/desktop/Prince_all.png") top center no-repeat;
+  background-size: contain;
+  width: 809px;
+  height: 677.9px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-20%);
+  z-index: 30;
 }
 .bg > .contents {
   position: absolute;
-  top: 274px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 30;
+  z-index: 40;
 }
 .welcome-title {
   max-width: 831px;
@@ -56,18 +76,8 @@ main {
 .welcome-title.mobile {
   display: none;
 }
-.prince-img {
-  margin-top: 21px;
-  max-width: 809px;
-  max-height: 677.9px;
-}
 .enter-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 330px;
-  max-height: 70px;
+  margin: 300px 0 188px;
 }
 .bg > .contents > .text {
   font-family: Inter;
@@ -79,9 +89,8 @@ main {
   letter-spacing: normal;
   text-align: left;
   color: #bdbdbd;
-  margin-top: -100px;
 }
-.bg > .contents > .text > p + p {
+.text > p + p {
   margin-top: 40px;
 }
 
@@ -94,6 +103,10 @@ section {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.community {
+  background: url("../image/desktop/element_bg.png") center no-repeat;
+  background-size: cover;
 }
 .contents > .number-icon {
   width: 72px;
@@ -112,27 +125,45 @@ section {
   max-width: 774px;
   margin-top: 42px;
 }
-.contents > .button {
-  max-width: 330px;
-  max-height: 70px;
-  border-radius: 6px;
-  border-width: 1.5px;
-}
-.contents > .image1 {
-  max-width: 765.2px;
-  max-height: 473.8px;
+.shadow-image {
+  width: 765.2px;
+  height: 473.8px;
   margin: 77.3px 0 32.2px;
+
+  background: url("../image/desktop/cnt_01_obj.png") top center no-repeat;
+  background-size: contain;
 }
-.contents > .image2 {
-  max-width: 713px;
-  max-height: 801px;
+.phone-image {
+  width: 713px;
+  height: 801px;
   margin-top: 17px;
+
+  background: url("../image/desktop/cnt_02_mockup.png") top center no-repeat;
+  background-size: contain;
+
+  position: relative;
 }
-.contents > .image3 {
-  max-width: 537px;
-  max-height: 154px;
-  margin-top: -300px;
+.exchange-image {
+  width: 537px;
+  height: 154px;
   margin-bottom: 76px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  background: url("../image/desktop/cnt_02_obj.png") top center no-repeat;
+  background-size: contain;
+}
+.element-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 222.8px;
+  height: 222.8px;
+  background: url("../image/desktop/element_bg_02.png") center no-repeat;
+  background-size: cover;
 }
 .play-text {
   max-width: 321px;
@@ -141,37 +172,20 @@ section {
 .game-info {
   margin-top: 140px;
 }
-
 .mobile {
   display: none;
 }
 
-@media (max-width: 1024px) {
-  main {
-    padding: 78px 0 228px 0;
-  }
-  .bg {
-    background-size: cover;
-  }
-  .center-cube {
-    width: 100%;
-  }
-  .contents {
-    width: 100%;
-  }
-  .bg > .contents > .text,
-  .contents > .text {
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   section:not(.bg),
-  .sns-icons,
-  .left-cube,
   .text,
   .welcome-title {
     display: none;
+  }
+
+  .welcome-title.mobile {
+    display: block;
+    max-width: 252px;
   }
 
   body {
@@ -179,44 +193,40 @@ section {
     overflow: hidden;
   }
   main {
-    padding: 16px 0 24px;
-    flex: 1 1 auto;
-    height: calc(100vh - 115px);
-    overflow: hidden;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    flex: 1 1 auto;
+    height: calc(100vh - 115px);
+    overflow: hidden;
   }
   .bg {
-    min-height: unset;
-  }
-  .right-cube {
-    max-width: 79px;
-    max-height: 79px;
-    top: -79px;
-    right: 0;
+    min-height: 568px;
   }
   .center-cube {
-    max-width: 147px;
-    max-height: 158.5px;
-    top: 0;
+    width: 147px;
+    height: 158.5px;
   }
-  .bg > .contents {
-    top: 30px;
+  .left-cube {
+    width: 140.3px;
+    height: 140.3px;
+    left: -50%;
+    bottom: -50%;
+    transform: translateX(-50%);
   }
-
+  .right-cube {
+    width: 79px;
+    height: 79px;
+    right: -50%;
+    top: -50%;
+    transform: translate(50%, 50%);
+  }
   .prince-img {
-    max-width: 289px;
-    max-height: 243px;
-  }
-  .welcome-title.mobile {
-    display: block;
-    max-width: 252px;
-    margin: -60px;
+    width: 289px;
+    height: 243px;
   }
   .enter-button {
-    top: unset;
-    bottom: -160px;
+    margin: 30px 0 0;
   }
 }

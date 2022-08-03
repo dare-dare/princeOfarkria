@@ -13,11 +13,11 @@ main {
   padding-top: 143px;
 }
 .prince-image {
-  max-width: 809px;
-  max-height: 677.9px;
+  width: 809px;
+  height: 677.9px;
   margin: 0 auto;
-  /* background: url(../image/desktop/Prince_all.png) center no-repeat;
-  background-size: cover; */
+  background: url("../image/desktop/Prince_all.png") center no-repeat;
+  background-size: cover;
 }
 .status {
   position: absolute;
@@ -77,6 +77,8 @@ main {
   background-size: contain;
 }
 .breadcrumb {
+  display: flex;
+  align-items: center;
   font-family: Audiowide;
   font-size: 14px;
   font-weight: normal;
@@ -88,19 +90,25 @@ main {
   color: #818181;
   padding: 37px 50px;
 }
-.breadcrumb > span + span {
+.breadcrumb > div + div {
   margin-left: 15px;
   vertical-align: middle;
 }
 .circle-icon {
   width: 16px;
   height: 16px;
-  vertical-align: middle;
+  vertical-align: text-top;
   margin-right: 5px;
+  display: inline-block;
+  background: url("../image/desktop/page_nav_circle.png") center no-repeat;
+  background-size: contain;
 }
 .community-title {
   width: 138px;
   height: 20px;
+
+  background: url("../image/desktop/community_tit.png") center no-repeat;
+  background-size: contain;
 }
 
 .list-filter {
@@ -127,6 +135,9 @@ main {
 .filter-icon {
   width: 23.4px;
   height: 21px;
+
+  background: url("../image/desktop/icon/filter_ico.png") center no-repeat;
+  background-size: contain;
 }
 .list-filter > div > .tag {
   margin-left: 10px;
@@ -238,6 +249,15 @@ main {
   height: 15.2px;
   vertical-align: text-top;
   margin-right: 5px;
+  padding-left: 20px;
+}
+.list-item-info-icon.share {
+  background: url("../image/desktop/icon/share.png") center no-repeat;
+  background-size: contain;
+}
+.list-item-info-icon.heart {
+  background: url("../image/desktop/icon/heart_ico_s.png") center no-repeat;
+  background-size: contain;
 }
 .pagination {
   text-align: center;
