@@ -3,6 +3,65 @@ main {
   padding: 78px 0 228px;
   background-color: #050505;
   color: #fff;
+  overflow: hidden;
+}
+#menu-icon {
+  position: relative;
+  cursor: pointer;
+}
+#menu {
+  position: absolute;
+  top: -95px;
+  right: -91.5px;
+
+  width: 540px;
+  height: 1080px;
+  padding: 161px 89px 125px 78px;
+  background-color: #151515;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaa;
+
+  display: none;
+}
+#menu.clicked {
+  display: block;
+}
+#menu > div + div {
+  margin-top: 20px;
+}
+.menu-title {
+  font-family: Audiowide;
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+}
+#menu > hr {
+  margin: 30px 0;
+}
+.logout {
+  display: inline-block;
+  margin-top: 48px;
+  text-decoration: underline;
+}
+.close {
+  margin-bottom: 21px;
+  text-align: right;
+  cursor: pointer;
+}
+.close-icon {
+  width: 18px;
+  height: 18px;
+  background: url("../image/desktop/icon/x.png") top center no-repeat;
+  background-size: cover;
+  display: inline-block;
 }
 
 .bg {

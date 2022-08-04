@@ -21,14 +21,74 @@
             <a href="/" target="_blank" class="sns-icon youtube"></a>
             <a href="/" target="_blank" class="sns-icon twitter"></a>
           </div>
-          <a class="menu-icon"></a>
+          <div id="menu-icon" class="menu-icon">
+            <div id="menu">
+              <div class="close">
+                <div class="close-icon"></div>
+              </div>
+              <div class="menu-title">Community</div>
+              <hr />
+              <div class="menu-title">GAME</div>
+              <div>Memory game</div>
+              <div>Time attack</div>
+              <hr />
+              <div class="menu-title">MY PAGE</div>
+              <div>Earning history</div>
+              <div>connect discord</div>
+              <div>connect wallet</div>
+              <div>change password</div>
+              <hr />
+              <div class="menu-title">Service infomation</div>
+              <div>Terms of service</div>
+              <div>Privacy Policy</div>
+              <div>Company Information</div>
+              <hr />
+              <div class="sns-icons">
+                <a href="/" target="_blank" class="sns-icon discord"></a>
+                <a href="/" target="_blank" class="sns-icon insta"></a>
+                <a href="/" target="_blank" class="sns-icon youtube"></a>
+                <a href="/" target="_blank" class="sns-icon twitter"></a>
+              </div>
+              <a href="/" target="_self" class="logout">LOGOUT</a>
+            </div>
+          </div>
         </div>
       </nav>
       <nav class="nav mobile">
         <div class="logo">
           <img src="image/mobile/logo_m.png" alt="logo" />
         </div>
-        <a class="menu-icon"></a>
+        <div id="menu-icon" class="menu-icon">
+          <div id="menu">
+            <div class="close">
+              <div class="close-icon"></div>
+            </div>
+            <div class="menu-title">Community</div>
+            <hr />
+            <div class="menu-title">GAME</div>
+            <div>Memory game</div>
+            <div>Time attack</div>
+            <hr />
+            <div class="menu-title">MY PAGE</div>
+            <div>Earning history</div>
+            <div>connect discord</div>
+            <div>connect wallet</div>
+            <div>change password</div>
+            <hr />
+            <div class="menu-title">Service infomation</div>
+            <div>Terms of service</div>
+            <div>Privacy Policy</div>
+            <div>Company Information</div>
+            <hr />
+            <div class="sns-icons">
+              <a href="/" target="_blank" class="sns-icon discord"></a>
+              <a href="/" target="_blank" class="sns-icon insta"></a>
+              <a href="/" target="_blank" class="sns-icon youtube"></a>
+              <a href="/" target="_blank" class="sns-icon twitter"></a>
+            </div>
+            <a href="/" target="_self" class="logout">LOGOUT</a>
+          </div>
+        </div>
       </nav>
       <section class="bg">
         <div class="line"></div>
@@ -113,5 +173,20 @@
         ><span>All rights reserved.</span>
       </div>
     </footer>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close")[0];
+
+      menuIcon.addEventListener("click", function (event) {
+        const menu = document.getElementById("menu");
+        const clickedClass = "clicked";
+
+        menu.classList.toggle(clickedClass);
+      });
+
+      close.onclick = function () {
+        menu.style.display = "none";
+      };
+    </script>
   </body>
 </html>
