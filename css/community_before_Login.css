@@ -205,6 +205,9 @@ main {
   border: solid 1px #8a8a8a;
   color: #8a8a8a;
 }
+.list-item {
+  cursor: pointer;
+}
 .list-item-text {
   margin-left: 30px;
 }
@@ -241,7 +244,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
-.list-item-info > span {
+.list-item-info > div {
   margin-left: 15px;
 }
 .list-item-info-icon {
@@ -278,6 +281,30 @@ main {
   background-color: #494949;
 }
 
+#menu-icon {
+  position: relative;
+}
+#menu {
+  position: absolute;
+  top: 26px;
+  right: 3px;
+  z-index: 50;
+
+  width: 77px;
+  height: 142px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #222;
+
+  display: none;
+}
+#menu.clicked {
+  display: block;
+}
+#menu > button + button {
+  margin-top: 10px;
+}
+
 @media (max-width: 748px) {
   body {
     height: 100vh;
@@ -291,6 +318,10 @@ main {
   .bg {
     padding-top: 72px;
     height: 380px;
+  }
+  .prince-image {
+    width: 289px;
+    height: 243px;
   }
   .status {
     top: 194px;
@@ -314,9 +345,6 @@ main {
   }
   .login-button {
     margin-left: 0;
-  }
-  .prince-image {
-    padding: 0 44px;
   }
 
   .list {
@@ -352,7 +380,6 @@ main {
   .breadcrumb {
     display: none;
   }
-
   .hypper {
     font-size: 20px;
   }
@@ -365,7 +392,6 @@ main {
     font-size: 12px;
     padding: 6px 10px;
   }
-
   .pagination {
     margin-top: 20px;
   }
