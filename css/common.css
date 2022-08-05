@@ -160,35 +160,43 @@ footer > .sns-icons {
   height: 70px;
 
   background: url("../image/desktop/Enter_btn.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .community-button {
   width: 330px;
   height: 70px;
 
   background: url("../image/desktop/cnt_01_btn.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .game-start-button {
   width: 330px;
   height: 70px;
 
   background: url("../image/desktop/Game_start_btn.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .login-button {
   width: 330px;
   height: 70px;
 
   background: url("../image/desktop/login_btn.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .join-button {
   width: 330px;
   height: 70px;
 
   background: url("../image/desktop/join_us_btn.png") top center no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+.inner-close-button {
+  background: url("../image/mobile/inner_close_btn.png") center no-repeat;
+  background-size: cover;
+}
+.inner-open-button {
+  background: url("../image/mobile/inner_open_btn.png") center no-repeat;
+  background-size: cover;
 }
 @media (max-width: 640px) {
   .enter-button {
@@ -218,4 +226,26 @@ footer > .sns-icons {
   height: 100%;
   background: url("../image/desktop/status_bar_bg.png") center no-repeat;
   background-size: cover;
+}
+
+/* icon */
+.invite-icon {
+  background: url("../image/desktop/icon/invite_ico.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.circle-icon {
+  background: url("../image/desktop/icon/page_nav_circle.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.wallet-icon {
+  background: url("../image/desktop/icon/wallet_ico_on.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.pass-icon {
+  background: url("../image/desktop/icon/pass_ico.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
 }
