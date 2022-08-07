@@ -132,7 +132,7 @@ article {
   font-family: Audiowide;
   font-size: 14px;
   color: #818181;
-  padding: 37px 50px;
+  padding: 30px 50px;
 }
 .breadcrumb > span + span {
   margin-left: 15px;
@@ -265,7 +265,7 @@ article {
   }
 }
 
-list-filter {
+.list-filter {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -361,7 +361,7 @@ list-filter {
 }
 .pagination {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .pagination a {
   text-decoration: none;

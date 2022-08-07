@@ -135,7 +135,7 @@ article {
   font-family: Audiowide;
   font-size: 14px;
   color: #818181;
-  padding: 37px 50px;
+  padding: 30px 50px;
 }
 .breadcrumb > span + span {
   margin-left: 15px;
@@ -391,6 +391,9 @@ article {
 .button {
   text-align: center;
   margin-top: 62px;
+}
+.bg-tag {
+  padding: 8px 20px;
 }
 
 @media (max-width: 640px) {

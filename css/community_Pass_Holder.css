@@ -84,7 +84,7 @@ main {
 
   font-family: Inter;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
   color: #a5a5a5;
 
   margin-left: 15px;
@@ -132,7 +132,7 @@ article {
   font-family: Audiowide;
   font-size: 14px;
   color: #818181;
-  padding: 37px 50px;
+  padding: 30px 50px;
 }
 .breadcrumb > span + span {
   margin-left: 15px;
@@ -362,7 +362,7 @@ article {
 }
 .pagination {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .pagination a {
   text-decoration: none;
