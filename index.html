@@ -8,7 +8,25 @@
     <link rel="stylesheet" type="text/css" href="css/css.css" />
   </head>
   <body>
-    <select class="page-select" name="pageSelect">
+    <select
+      onchange="window.open(value, '_self')"
+      class="page-select"
+      name="pageSelect"
+      style="
+        position: fixed !important;
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 16px !important;
+        padding: 8px 16px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 0 !important;
+        background: rgb(0 0 0 / 37%) !important;
+        z-index: 100 !important;
+        color: #fff !important;
+        width: 30% !important;
+      "
+    >
       <option value="main_fix.html" selected>Main_fix</option>
       <option value="main_fix_menu_before.html">Main_fix_menu_before</option>
       <option value="community_before_Login.html">
@@ -26,7 +44,7 @@
       <option value="mypage_popUp.html">mypage_popUp</option>
       <option value="mypage_cubic_history.html">mypage_cubic_history</option>
     </select>
-    <div id="includedContent"></div>
+    <!-- <div id="includedContent"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
@@ -34,10 +52,9 @@
 
         $("select[name=pageSelect]").change(function () {
           let page = $(this).val();
-          console.log(page);
           $("#includedContent").load(page);
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
