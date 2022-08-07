@@ -4,7 +4,7 @@ hr {
 main {
   background-color: #050505;
   position: relative;
-  height: 1465px;
+  height: 1600px;
 }
 .bg {
   background: url("../image/desktop/spot_bg.png") center no-repeat;
@@ -19,9 +19,9 @@ section {
   top: 407px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 40px);
-  height: 100%;
-  max-width: 1240px;
+  max-width: 1280px;
+  width: 100%;
+  padding: 20px;
 }
 .status-bar {
   border-radius: 4px;
@@ -183,7 +183,6 @@ section {
   color: #fff;
 
   margin-left: 15px;
-  height: 48px;
 }
 .icon {
   width: 24px;
@@ -244,7 +243,7 @@ section {
     border-bottom: none;
   }
   main {
-    height: 956px;
+    min-height: 800px;
     padding-bottom: 310px;
   }
   .nav-title {
@@ -271,10 +270,11 @@ section {
     padding-top: 36px;
   }
   section {
-    top: 150px;
+    top: 100px;
   }
   .status-bar {
     background-image: none;
+    padding: 0;
   }
   .lets-hyper {
     margin: 0 0 24px;
@@ -309,6 +309,21 @@ section {
   .join-desc {
     font-size: 14px;
   }
+  .user-info-wrapper {
+    background: url("../image/desktop/status_bar_bg.png") center no-repeat;
+    background-size: cover;
+    padding: 20px;
+  }
+  .user-info {
+    font-size: 14px;
+  }
+  .user-info-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .connect {
+    font-size: 13px;
+  }
   .user-image {
     width: 26px;
     height: 26px;
@@ -325,13 +340,47 @@ section {
     padding: 24px 20px;
   }
   .info-button {
-    width: 61px;
-    height: 26px;
     padding: 5px 12px;
     font-size: 11px;
   }
   .info-button > .icon {
     width: 16px;
     height: 16px;
+  }
+  .ruby {
+    font-size: 18px;
+  }
+  .ruby-image {
+    width: 19.3px;
+    height: 36px;
+    margin-right: 4px;
+  }
+  .history {
+    margin-left: 4px;
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  .bg-tag {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logout-button {
+    width: 100%;
+  }
+  .info-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .info-buttons > .info-button {
+    font-size: 8px;
+    padding: 3px;
+  }
+  .info-buttons > .info-button + .info-button {
+    margin-left: 4px;
+  }
+  .info-buttons > .info-button > .pass-icon {
+    width: 9px;
+    height: 9px;
   }
 }

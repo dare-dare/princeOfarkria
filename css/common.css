@@ -262,6 +262,101 @@ footer > .sns-icons {
   }
 }
 
+/* modal */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  display: none;
+}
+.modal-content-bg {
+  background: url(../image/desktop/pop_up_layer.png) center no-repeat;
+  background-size: cover;
+  max-width: 680px;
+}
+.modal-content {
+  padding: 74px 50px;
+
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal-text {
+  margin: 20px 0 40px;
+}
+.modal-content > .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content > .buttons > button {
+  padding: 18px 26px 19px 27px;
+  border-radius: 30px;
+  background-color: #222;
+
+  font-family: Audiowide;
+  font-size: 20px;
+  line-height: 1;
+  color: #aaa;
+  min-width: 285px;
+  margin: 8px;
+  flex: 0 1 calc(50% - 32px);
+}
+.discode-active-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.info-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.info-icon > img {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    padding: 50px 32px;
+  }
+  .modal-text {
+    font-size: 16px;
+    margin: 20px 24px;
+  }
+  .modal-content > .buttons {
+    flex-wrap: wrap;
+  }
+  .modal-content > .buttons > button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
 /* buttons */
 .enter-button {
   width: 330px;
@@ -349,6 +444,10 @@ footer > .sns-icons {
   background: url("../image/mobile/icon/gameinfo_ico_m.png") center no-repeat;
   background-size: contain;
 }
+.ok-button {
+  background: url("../image/desktop/ok_btn.png") center no-repeat;
+  background-size: contain;
+}
 @media (max-width: 640px) {
   .enter-button {
     width: 290px;
@@ -423,6 +522,11 @@ footer > .sns-icons {
   background-size: cover;
   display: inline-block;
 }
+.w-wallet-icon {
+  background: url("../image/mobile/icon/wallet_ico_m.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
 .pass-icon {
   background: url("../image/desktop/icon/pass_ico.png") center no-repeat;
   background-size: cover;
@@ -447,8 +551,12 @@ footer > .sns-icons {
   background-size: contain;
 }
 .discode-icon {
-  background: url("../image/desktop/icon/ discord_ico_no_bg.png") center
+  background: url("../image/desktop/icon/discord_ico_no_bg.png") center
     no-repeat;
+  background-size: contain;
+}
+.discode-active-icon {
+  background: url("../image/mobile/icon/discord-active.png") center no-repeat;
   background-size: contain;
 }
 .email-icon {
@@ -463,7 +571,6 @@ footer > .sns-icons {
   background: url("../image/desktop/icon/chevron_down_ico.png") center no-repeat;
   background-size: contain;
 }
-
 /* tag */
 .tag {
   padding: 10px 20px;
