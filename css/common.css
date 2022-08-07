@@ -4,6 +4,7 @@
 }
 body {
   margin: 0;
+  background-color: #050505;
 }
 p {
   margin: 0;
@@ -346,7 +347,7 @@ footer > .sns-icons {
 }
 .gameinfo-button {
   background: url("../image/mobile/icon/gameinfo_ico_m.png") center no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 @media (max-width: 640px) {
   .enter-button {
@@ -465,23 +466,13 @@ footer > .sns-icons {
 
 /* tag */
 .tag {
-  width: 107px;
-  height: 40px;
-  flex-grow: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   padding: 10px 20px;
   border-radius: 29px;
 
   font-family: Inter;
   font-size: 20px;
   font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
   color: #ff13e7;
 }
 .tag.poll {
@@ -503,6 +494,12 @@ footer > .sns-icons {
 .tag.disabled {
   border: solid 1px #8a8a8a;
   color: #8a8a8a;
+}
+@media (max-width: 640px) {
+  .tag {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 .border-tag {
   display: flex;

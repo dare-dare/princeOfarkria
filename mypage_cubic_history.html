@@ -11,5 +11,64 @@
       href="./css/mypage_cubic_history.css"
     />
   </head>
-  <body></body>
+  <body>
+    <div id="menu">
+      <div class="close">
+        <div class="close-icon"></div>
+      </div>
+      <div class="menu-title">Community</div>
+      <hr />
+      <div class="menu-title">GAME</div>
+      <div class="menu-subtitle">Memory game</div>
+      <div class="menu-subtitle">Time attack</div>
+      <hr />
+      <div class="menu-title">MY PAGE</div>
+      <div class="menu-subtitle">Earning history</div>
+      <div class="menu-subtitle">connect discord</div>
+      <div class="menu-subtitle">connect wallet</div>
+      <div class="menu-subtitle">change password</div>
+      <hr />
+      <div class="menu-title">Service infomation</div>
+      <div class="menu-subtitle">Terms of service</div>
+      <div class="menu-subtitle">Privacy Policy</div>
+      <div class="menu-subtitle">Company Information</div>
+      <hr />
+      <div class="sns-icons">
+        <a href="/" target="_blank" class="sns-icon discord"></a>
+        <a href="/" target="_blank" class="sns-icon insta"></a>
+        <a href="/" target="_blank" class="sns-icon youtube"></a>
+        <a href="/" target="_blank" class="sns-icon twitter"></a>
+      </div>
+      <div>
+        <a href="/" target="_self" class="logout">LOGOUT</a>
+      </div>
+    </div>
+    <main>
+      <nav>
+        <a href="/" target="_blank" class="nav-logo"> </a>
+        <div class="nav-right">
+          <div class="sns-icons">
+            <a href="/" target="_blank" class="sns-icon discord"></a>
+            <a href="/" target="_blank" class="sns-icon insta"></a>
+            <a href="/" target="_blank" class="sns-icon youtube"></a>
+            <a href="/" target="_blank" class="sns-icon twitter"></a>
+          </div>
+          <div id="menu-icon" class="menu-icon"></div>
+        </div>
+      </nav>
+    </main>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close-icon")[0];
+      const clickedClass = "clicked";
+      const menu = document.getElementById("menu");
+
+      menuIcon.onclick = () => {
+        menu.classList.toggle(clickedClass);
+      };
+      close.onclick = () => {
+        menu.classList.remove("clicked");
+      };
+    </script>
+  </body>
 </html>
