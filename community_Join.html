@@ -9,11 +9,42 @@
     <link rel="stylesheet" type="text/css" href="./css/community_Join.css" />
   </head>
   <body>
-    <main>
+    <div id="menu">
+      <div class="close">
+        <div class="close-icon"></div>
+      </div>
+      <div class="menu-title">Community</div>
+      <hr />
+      <div class="menu-title">GAME</div>
+      <div class="menu-subtitle">Memory game</div>
+      <div class="menu-subtitle">Time attack</div>
+      <hr />
+      <div class="menu-title">MY PAGE</div>
+      <div class="menu-subtitle">Earning history</div>
+      <div class="menu-subtitle">connect discord</div>
+      <div class="menu-subtitle">connect wallet</div>
+      <div class="menu-subtitle">change password</div>
+      <hr />
+      <div class="menu-title">Service infomation</div>
+      <div class="menu-subtitle">Terms of service</div>
+      <div class="menu-subtitle">Privacy Policy</div>
+      <div class="menu-subtitle">Company Information</div>
+      <hr />
+      <div class="sns-icons">
+        <a href="/" target="_blank" class="sns-icon discord"></a>
+        <a href="/" target="_blank" class="sns-icon insta"></a>
+        <a href="/" target="_blank" class="sns-icon youtube"></a>
+        <a href="/" target="_blank" class="sns-icon twitter"></a>
+      </div>
+      <div>
+        <a href="/" target="_self" class="logout">LOGOUT</a>
+      </div>
+    </div>
+    <main id="main">
       <nav>
-        <a href="/" target="_blank"
-          ><img class="nav-logo" src="image/desktop/logo.png" alt="logo"
-        /></a>
+        <a href="/" target="_blank" class="nav-logo only-desktop"> </a>
+        <a class="back-icon mobile"></a>
+        <div class="nav-title mobile">JOIN</div>
         <div class="nav-right">
           <div class="sns-icons">
             <a href="/" target="_blank" class="sns-icon discord"></a>
@@ -21,80 +52,227 @@
             <a href="/" target="_blank" class="sns-icon youtube"></a>
             <a href="/" target="_blank" class="sns-icon twitter"></a>
           </div>
-          <a class="menu-icon"></a>
+          <div id="menu-icon" class="menu-icon"></div>
         </div>
-      </nav>
-      <nav class="nav mobile">
-        <div class="logo">
-          <img src="image/mobile/logo_m.png" alt="logo" />
-        </div>
-        <a class="menu-icon"></a>
       </nav>
       <div class="bg">
         <div class="star-bg">
           <div class="prince-image"></div>
-          <div class="box">
-            <div class="status-bar">
-              <div class="breadcrumb">
-                <div class="breadcrumb-level">
-                  <div class="circle-icon"></div>
-                  PRINCE of Arkria
-                </div>
-                <div>>></div>
-                <div>
-                  <div class="login-title"></div>
-                </div>
-              </div>
-              <hr />
-              <div class="welcome">WELCOME</div>
-              <input
-                class="input"
-                type="text"
-                placeholder="Please enter your email."
-              />
-              <input
-                class="input"
-                type="text"
-                placeholder="Please enter your password."
-              />
-              <input
-                class="input"
-                type="text"
-                placeholder="Please enter your Nickname."
-              />
-              <p class="desc">
-                Use a password that is a combination of numbers, uppercase and
-                lowercase letters, and special characters.
-              </p>
-              <div class="code-inputs">
-                <input class="code-input" type="text" size="1" />
-                <input class="code-input" type="text" size="1" />
-                <input class="code-input" type="text" size="1" />
-                <input class="code-input" type="text" size="1" />
-                <input class="code-input" type="text" size="1" />
-                <input class="code-input" type="text" size="1" />
-              </div>
-              <p class="desc">
-                Enter the verification code sent to you by email.
-              </p>
-              <p class="point-text">You are invited by dkadu3984</p>
-              <button class="join-button"></button>
+        </div>
+      </div>
+      <section class="page-content">
+        <div class="status-bar">
+          <div class="breadcrumb">
+            <div class="breadcrumb-level">
+              <div class="circle-icon"></div>
+              PRINCE of Arkria
             </div>
-            <div class="enter-login-bar">
-              <input type="checkbox" id="check" />
-              <label for="check"
-                >Consent to Terms and Conditions (Required)</label
-              >
+            <div class="breadcrumb-level">>></div>
+            <div class="breadcrumb-level">
+              <div class="breadcrumb-title"></div>
             </div>
-            <div class="enter-login-bar">
-              <input type="checkbox" id="check" />
-              <label for="check"
-                >Consent to provide personal information (required)</label
-              >
+          </div>
+          <hr />
+          <div class="content-title only-desktop">WELCOME</div>
+          <div class="content-title mobile"></div>
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter your email."
+          />
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter your password."
+          />
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter your Nickname."
+          />
+          <p class="desc">
+            Use a password that is a combination of numbers, uppercase and
+            lowercase letters, and special characters.
+          </p>
+          <div class="code-inputs">
+            <input class="code-input" type="text" size="1" />
+            <input class="code-input" type="text" size="1" />
+            <input class="code-input" type="text" size="1" />
+            <input class="code-input" type="text" size="1" />
+            <input class="code-input" type="text" size="1" />
+            <input class="code-input" type="text" size="1" />
+          </div>
+          <p class="desc">Enter the verification code sent to you by email.</p>
+          <p class="point-text">You are invited by dkadu3984</p>
+          <button class="join-button"></button>
+        </div>
+        <div class="enter-login-bar">
+          <div>
+            <input type="checkbox" id="check" />
+            <label for="check"
+              >Consent to Terms and Conditions (Required)</label
+            >
+            <div id="more-button">
+              <div class="up-icon"></div>
+              <div class="down-icon"></div>
+            </div>
+          </div>
+          <div id="more-content">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+              tincidunt eget nullam non. Quis hendrerit dolor magna eget est
+              lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet
+              massa. Commodo odio aenean sed adipiscing diam donec adipiscing
+              tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor
+              augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus
+              arcu felis. Egestas integer eget aliquet nibh praesent. In hac
+              habitasse platea dictumst quisque sagittis purus. Pulvinar
+              elementum integer enim neque volutpat ac.Senectus et netus et
+              malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada
+              proin. Neque convallis a cras semper auctor. Libero id faucibus
+              nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus
+              vestibulum sed arcu non odio euismod lacinia. In tellus integer
+              feugiat scelerisque. Feugiat in fermentum posuere urna nec
+              tincidunt praesent. Porttitor rhoncus dolor purus non enim
+              praesent elementum facilisis. Nisi scelerisque eu ultrices vitae
+              auctor eu augue ut lectus. Ipsum faucibus vitae aliquet nec
+              ullamcorper sit amet risus. Et malesuada fames ac turpis egestas
+              sed. Sit amet nisl suscipit adipiscing bibendum est ultricies.
+              Arcu ac tortor dignissim convallis aenean et tortor at. Pretium
+              viverra suspendisse potenti nullam ac tortor vitae purus. Eros
+              donec ac odio tempor orci dapibus ultrices. Elementum nibh tellus
+              molestie nunc. Et magnis dis parturient montes nascetur. Est
+              placerat in egestas erat imperdiet. Consequat interdum varius sit
+              amet mattis vulputate enim.Sit amet nulla facilisi morbi tempus.
+              Nulla facilisi cras fermentum odio eu. Etiam erat velit
+              scelerisque in dictum non consectetur a erat. Enim nulla aliquet
+              porttitor lacus luctus accumsan tortor posuere. Ut sem nulla
+              pharetra diam. Fames ac turpis egestas maecenas. Bibendum neque
+              egestas congue quisque egestas diam. Laoreet id donec ultrices
+              tincidunt arcu non sodales neque. Eget felis eget nunc lobortis
+              mattis aliquam faucibus purus. Faucibus interdum posuere lorem
+              ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Nisl tincidunt eget nullam non. Quis
+              hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat
+              odio facilisis mauris sit amet massa. Commodo odio aenean sed
+              adipiscing diam donec adipiscing tristique. Mi eget mauris
+              pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet
+              dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas
+              integer eget aliquet nibh praesent. In hac habitasse platea
+              dictumst quisque sagittis purus. Pulvinar elementum integer enim
+              neque volutpat ac.Senectus et netus et malesuada. Nunc pulvinar
+              sapien et ligula ullamcorper malesuada proin. Neque convallis a
+              cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a
+              diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio
+              euismod lacinia. In tellus integer feugiat scelerisque. Feugiat in
+              fermentum posuere urna nec tincidunt praesent. Porttitor rhoncus
+              dolor purus non enim praesent elementum facilisis. Nisi
+              scelerisque eu ultrices vitae auctor eu augue ut lectus. Ipsum
+              faucibus vitae aliquet nec ullamcorper sit amet risus. Et
+              malesuada fames ac turpis egestas sed. Sit amet nisl suscipit
+              adipiscing bibendum est ultricies. Arcu ac tortor dignissim
+              convallis aenean et tortor at. Pretium viverra suspendisse potenti
+              nullam ac tortor vitae purus. Eros donec ac odio tempor orci
+              dapibus ultrices. Elementum nibh tellus molestie nunc. Et magnis
+              dis parturient montes nascetur. Est placerat in egestas erat
+              imperdiet. Consequat interdum varius sit amet mattis vulputate
+              enim.Sit amet nulla facilisi morbi tempus. Nulla facilisi cras
+              fermentum odio eu. Etiam erat velit scelerisque in dictum non
+              consectetur a erat. Enim nulla aliquet porttitor lacus luctus
+              accumsan tortor posuere. Ut sem nulla pharetra diam. Fames ac
+              turpis egestas maecenas. Bibendum neque egestas congue quisque
+              egestas diam. Laoreet id donec ultrices tincidunt arcu non sodales
+              neque. Eget felis eget nunc lobortis mattis aliquam faucibus
+              purus. Faucibus interdum posuere lorem ipsum dolor sit.
             </div>
           </div>
         </div>
-      </div>
+        <div class="enter-login-bar">
+          <div>
+            <input type="checkbox" id="check" />
+            <label for="check"
+              >Consent to provide personal information (required)</label
+            >
+            <div id="more-button">
+              <div class="up-icon"></div>
+              <div class="down-icon"></div>
+            </div>
+          </div>
+          <div id="more-content">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+              tincidunt eget nullam non. Quis hendrerit dolor magna eget est
+              lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet
+              massa. Commodo odio aenean sed adipiscing diam donec adipiscing
+              tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor
+              augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus
+              arcu felis. Egestas integer eget aliquet nibh praesent. In hac
+              habitasse platea dictumst quisque sagittis purus. Pulvinar
+              elementum integer enim neque volutpat ac.Senectus et netus et
+              malesuada. Nunc pulvinar sapien et ligula ullamcorper malesuada
+              proin. Neque convallis a cras semper auctor. Libero id faucibus
+              nisl tincidunt eget. Leo a diam sollicitudin tempor id. A lacus
+              vestibulum sed arcu non odio euismod lacinia. In tellus integer
+              feugiat scelerisque. Feugiat in fermentum posuere urna nec
+              tincidunt praesent. Porttitor rhoncus dolor purus non enim
+              praesent elementum facilisis. Nisi scelerisque eu ultrices vitae
+              auctor eu augue ut lectus. Ipsum faucibus vitae aliquet nec
+              ullamcorper sit amet risus. Et malesuada fames ac turpis egestas
+              sed. Sit amet nisl suscipit adipiscing bibendum est ultricies.
+              Arcu ac tortor dignissim convallis aenean et tortor at. Pretium
+              viverra suspendisse potenti nullam ac tortor vitae purus. Eros
+              donec ac odio tempor orci dapibus ultrices. Elementum nibh tellus
+              molestie nunc. Et magnis dis parturient montes nascetur. Est
+              placerat in egestas erat imperdiet. Consequat interdum varius sit
+              amet mattis vulputate enim.Sit amet nulla facilisi morbi tempus.
+              Nulla facilisi cras fermentum odio eu. Etiam erat velit
+              scelerisque in dictum non consectetur a erat. Enim nulla aliquet
+              porttitor lacus luctus accumsan tortor posuere. Ut sem nulla
+              pharetra diam. Fames ac turpis egestas maecenas. Bibendum neque
+              egestas congue quisque egestas diam. Laoreet id donec ultrices
+              tincidunt arcu non sodales neque. Eget felis eget nunc lobortis
+              mattis aliquam faucibus purus. Faucibus interdum posuere lorem
+              ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Nisl tincidunt eget nullam non. Quis
+              hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat
+              odio facilisis mauris sit amet massa. Commodo odio aenean sed
+              adipiscing diam donec adipiscing tristique. Mi eget mauris
+              pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet
+              dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas
+              integer eget aliquet nibh praesent. In hac habitasse platea
+              dictumst quisque sagittis purus. Pulvinar elementum integer enim
+              neque volutpat ac.Senectus et netus et malesuada. Nunc pulvinar
+              sapien et ligula ullamcorper malesuada proin. Neque convallis a
+              cras semper auctor. Libero id faucibus nisl tincidunt eget. Leo a
+              diam sollicitudin tempor id. A lacus vestibulum sed arcu non odio
+              euismod lacinia. In tellus integer feugiat scelerisque. Feugiat in
+              fermentum posuere urna nec tincidunt praesent. Porttitor rhoncus
+              dolor purus non enim praesent elementum facilisis. Nisi
+              scelerisque eu ultrices vitae auctor eu augue ut lectus. Ipsum
+              faucibus vitae aliquet nec ullamcorper sit amet risus. Et
+              malesuada fames ac turpis egestas sed. Sit amet nisl suscipit
+              adipiscing bibendum est ultricies. Arcu ac tortor dignissim
+              convallis aenean et tortor at. Pretium viverra suspendisse potenti
+              nullam ac tortor vitae purus. Eros donec ac odio tempor orci
+              dapibus ultrices. Elementum nibh tellus molestie nunc. Et magnis
+              dis parturient montes nascetur. Est placerat in egestas erat
+              imperdiet. Consequat interdum varius sit amet mattis vulputate
+              enim.Sit amet nulla facilisi morbi tempus. Nulla facilisi cras
+              fermentum odio eu. Etiam erat velit scelerisque in dictum non
+              consectetur a erat. Enim nulla aliquet porttitor lacus luctus
+              accumsan tortor posuere. Ut sem nulla pharetra diam. Fames ac
+              turpis egestas maecenas. Bibendum neque egestas congue quisque
+              egestas diam. Laoreet id donec ultrices tincidunt arcu non sodales
+              neque. Eget felis eget nunc lobortis mattis aliquam faucibus
+              purus. Faucibus interdum posuere lorem ipsum dolor sit.
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="sns-icons">
@@ -112,5 +290,50 @@
         ><span>All rights reserved.</span>
       </div>
     </footer>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close-icon")[0];
+      const clickedClass = "clicked";
+      const menu = document.getElementById("menu");
+
+      menuIcon.onclick = () => {
+        menu.classList.toggle(clickedClass);
+      };
+      close.onclick = () => {
+        menu.classList.remove("clicked");
+      };
+
+      const moreButton = document.getElementById("more-button");
+
+      document.querySelectorAll("#more-button").forEach((item, index) => {
+        const moreButton = document.querySelectorAll("#more-button")[index];
+        const moreContent = document.querySelectorAll("#more-content")[index];
+        const moreClickedClass = "clicked";
+        const upIcon = document.querySelectorAll(".up-icon")[index];
+        const downIcon = document.querySelectorAll(".down-icon")[index];
+        let moreContentHeight;
+
+        item.addEventListener("click", (arrow) => {
+          const mainHeight = document.getElementById("main").offsetHeight;
+
+          moreContent.classList.toggle(moreClickedClass);
+
+          if (moreContent.classList.value === "clicked") {
+            moreContentHeight = moreContent.clientHeight;
+            downIcon.style.display = "none";
+            upIcon.style.display = "inline-block";
+
+            document.getElementById("main").style.minHeight =
+              mainHeight + moreContentHeight + "px";
+          } else {
+            downIcon.style.display = "inline-block";
+            upIcon.style.display = "none";
+
+            document.getElementById("main").style.minHeight =
+              mainHeight - moreContentHeight + "px";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

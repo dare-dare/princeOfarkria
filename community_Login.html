@@ -9,11 +9,42 @@
     <link rel="stylesheet" type="text/css" href="./css/community_Login.css" />
   </head>
   <body>
+    <div id="menu">
+      <div class="close">
+        <div class="close-icon"></div>
+      </div>
+      <div class="menu-title">Community</div>
+      <hr />
+      <div class="menu-title">GAME</div>
+      <div class="menu-subtitle">Memory game</div>
+      <div class="menu-subtitle">Time attack</div>
+      <hr />
+      <div class="menu-title">MY PAGE</div>
+      <div class="menu-subtitle">Earning history</div>
+      <div class="menu-subtitle">connect discord</div>
+      <div class="menu-subtitle">connect wallet</div>
+      <div class="menu-subtitle">change password</div>
+      <hr />
+      <div class="menu-title">Service infomation</div>
+      <div class="menu-subtitle">Terms of service</div>
+      <div class="menu-subtitle">Privacy Policy</div>
+      <div class="menu-subtitle">Company Information</div>
+      <hr />
+      <div class="sns-icons">
+        <a href="/" target="_blank" class="sns-icon discord"></a>
+        <a href="/" target="_blank" class="sns-icon insta"></a>
+        <a href="/" target="_blank" class="sns-icon youtube"></a>
+        <a href="/" target="_blank" class="sns-icon twitter"></a>
+      </div>
+      <div>
+        <a href="/" target="_self" class="logout">LOGOUT</a>
+      </div>
+    </div>
     <main>
       <nav>
-        <a href="/" target="_blank"
-          ><img class="nav-logo" src="image/desktop/logo.png" alt="logo"
-        /></a>
+        <a href="/" target="_blank" class="nav-logo only-desktop"> </a>
+        <a class="back-icon mobile"></a>
+        <div class="nav-title mobile">LOGIN</div>
         <div class="nav-right">
           <div class="sns-icons">
             <a href="/" target="_blank" class="sns-icon discord"></a>
@@ -21,61 +52,58 @@
             <a href="/" target="_blank" class="sns-icon youtube"></a>
             <a href="/" target="_blank" class="sns-icon twitter"></a>
           </div>
-          <a class="menu-icon"></a>
+          <div id="menu-icon" class="menu-icon"></div>
         </div>
-      </nav>
-      <nav class="nav mobile">
-        <div class="logo">
-          <img src="image/mobile/logo_m.png" alt="logo" />
-        </div>
-        <a class="menu-icon"></a>
       </nav>
       <div class="bg">
         <div class="star-bg">
           <div class="prince-image"></div>
-          <div class="status-bar">
-            <div class="breadcrumb">
-              <div class="breadcrumb-level">
-                <div class="circle-icon"></div>
-                PRINCE of Arkria
-              </div>
-              <div>>></div>
-              <div>
-                <div class="login-title"></div>
-              </div>
-            </div>
-            <hr />
-            <div class="lets-hyper">LET'S HYPER!</div>
-            <input
-              class="input"
-              type="text"
-              placeholder="Please enter your email."
-            />
-            <input
-              class="input"
-              type="text"
-              placeholder="Please enter your password."
-            />
-            <div class="noti">
-              <div>
-                <input type="checkbox" id="check" />
-                <label for="check">Remember my account</label>
-              </div>
-              <div>
-                <a href="/" target="_self">Forget E-mail</a>
-                /
-                <a href="/" target="_self">Password?</a>
-              </div>
-            </div>
-            <button class="login-button"></button>
-          </div>
         </div>
       </div>
-      <div class="enter-login-bar">
-        <span class="join-desc">Are you not a member yet? Play now!</span>
-        <hr class="dotted-line" />
-        <a class="join" href="/" target="_self">JOIN US</a>
-      </div>
+      <section class="page-content">
+        <div class="status-bar">
+          <div class="breadcrumb">
+            <div class="breadcrumb-level">
+              <div class="circle-icon"></div>
+              PRINCE of Arkria
+            </div>
+            <div class="breadcrumb-level">>></div>
+            <div class="breadcrumb-level">
+              <div class="breadcrumb-title"></div>
+            </div>
+          </div>
+          <hr />
+          <div class="content-title only-desktop">LET'S HYPER!</div>
+          <div class="content-title mobile"></div>
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter your email."
+          />
+          <input
+            class="input"
+            type="text"
+            placeholder="Please enter your password."
+          />
+          <div class="login-optins">
+            <div>
+              <input type="checkbox" id="check" />
+              <label for="check">Remember my account</label>
+            </div>
+            <div>
+              <a href="/" target="_self">Forget E-mail</a>
+              /
+              <a href="/" target="_self">Password?</a>
+            </div>
+          </div>
+          <button class="login-button"></button>
+        </div>
+        <div class="enter-login-bar">
+          <span class="join-desc">Are you not a member yet? Play now!</span>
+          <hr class="dotted-line" />
+          <a class="join" href="/" target="_self">JOIN US</a>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="sns-icons">
@@ -93,5 +121,18 @@
         ><span>All rights reserved.</span>
       </div>
     </footer>
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close-icon")[0];
+      const clickedClass = "clicked";
+      const menu = document.getElementById("menu");
+
+      menuIcon.onclick = () => {
+        menu.classList.toggle(clickedClass);
+      };
+      close.onclick = () => {
+        menu.classList.remove("clicked");
+      };
+    </script>
   </body>
 </html>

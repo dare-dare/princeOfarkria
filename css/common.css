@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -24,7 +25,9 @@ hr {
   max-width: 1140px;
   border-bottom: 1px solid #232323;
   border-top: 0;
-  margin: 25px 0 15px;
+}
+main {
+  background-color: #050505;
 }
 
 /* nav */
@@ -44,8 +47,23 @@ nav {
   display: flex;
   align-items: center;
 }
+.back-icon {
+  width: 24px;
+  height: 24px;
+}
+.nav-title {
+  font-family: Audiowide;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #fff;
+}
 .nav-logo {
   width: 384.7px;
+  padding-bottom: 5%;
+  background: url("../image/desktop/logo.png") left center no-repeat;
+  background-size: contain;
 }
 .sns-icon,
 .menu-icon {
@@ -55,23 +73,23 @@ nav {
   vertical-align: middle;
 }
 .sns-icon.discord {
-  background: url("../image/desktop/discord_ico.png") center no-repeat;
+  background: url("../image/desktop/icon/discord_ico.png") center no-repeat;
   background-size: cover;
 }
 .sns-icon.insta {
-  background: url("../image/desktop/insta_ico.png") center no-repeat;
+  background: url("../image/desktop/icon/insta_ico.png") center no-repeat;
   background-size: cover;
 }
 .sns-icon.youtube {
-  background: url("../image/desktop/youtube_ico.png") center no-repeat;
+  background: url("../image/desktop/icon/youtube_ico.png") center no-repeat;
   background-size: cover;
 }
 .sns-icon.twitter {
-  background: url("../image/desktop/twitter_ico.png") center no-repeat;
+  background: url("../image/desktop/icon/twitter_ico.png") center no-repeat;
   background-size: cover;
 }
 .menu-icon {
-  background: url("../image/desktop/menu_ico.png") center no-repeat;
+  background: url("../image/desktop/icon/menu_ico.png") center no-repeat;
   background-size: cover;
   margin-left: 46.5px;
 }
@@ -87,21 +105,110 @@ nav {
     padding: 0 23px 0 20px;
   }
 }
-@media (max-width: 640px) {
-  nav,
-  nav > .sns-icons {
+@media (max-width: 748px) {
+  .nav-right > .sns-icons {
     display: none;
   }
+}
+@media (max-width: 640px) {
   nav {
     top: 16px;
     padding: 0 23px 0 20px;
   }
-  nav.mobile {
-    display: flex;
+  .nav-logo {
+    width: 126px;
+    background: url("../image/mobile/logo_m.png") left center no-repeat;
+    background-size: contain;
   }
   .menu-icon {
     width: 24px;
+    margin-left: 0;
     height: 24px;
+  }
+}
+
+/* menu */
+#menu-icon {
+  position: relative;
+  cursor: pointer;
+}
+#menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 540px;
+  height: 1080px;
+  padding: 98px 78px 125px;
+  background-color: #151515;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #aaa;
+  z-index: 60;
+
+  display: none;
+}
+#menu.clicked {
+  display: block;
+}
+.menu-subtitle {
+  margin: 20px 0 0 20px;
+}
+.menu-title {
+  font-family: Audiowide;
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+}
+#menu > hr {
+  margin: 30px 0;
+}
+.logout,
+.joinus {
+  display: inline-block;
+  text-decoration: underline;
+}
+.login {
+  display: inline-block;
+}
+.joinus {
+  margin-left: 40px;
+}
+.close {
+  margin-bottom: 21px;
+  text-align: right;
+  cursor: pointer;
+}
+.close-icon {
+  width: 18px;
+  height: 18px;
+  background: url("../image/desktop/icon/x.png") top center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.links {
+  margin-top: 48px;
+}
+
+@media (max-width: 640px) {
+  #menu {
+    padding: 51px 37px 89px;
+    width: 80%;
+    overflow: auto;
+    height: 100vh;
+  }
+  .menu-title {
+    font-size: 18px;
+  }
+  .menu-subtitle {
+    font-size: 16px;
   }
 }
 
@@ -141,7 +248,7 @@ footer > .sns-icons {
     display: none;
   }
   footer {
-    padding: 0 0 34px;
+    padding: 80px 0 34px;
     background-color: #050505;
     flex-direction: column;
   }
@@ -181,14 +288,21 @@ footer > .sns-icons {
   height: 70px;
 
   background: url("../image/desktop/login_btn.png") top center no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+.logout-button {
+  width: 330px;
+  height: 70px;
+
+  background: url("../image/desktop/logout_btn.png") center no-repeat;
+  background-size: contain;
 }
 .join-button {
   width: 330px;
   height: 70px;
 
   background: url("../image/desktop/join_us_btn.png") top center no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .inner-close-button {
   background: url("../image/mobile/inner_close_btn.png") center no-repeat;
@@ -198,10 +312,54 @@ footer > .sns-icons {
   background: url("../image/mobile/inner_open_btn.png") center no-repeat;
   background-size: cover;
 }
+.heart-off-button {
+  background: url("../image/mobile/icon/heart_ico_off_m.png") center no-repeat;
+  background-size: cover;
+}
+.heart-on-button {
+  background: url("../image/mobile/icon/heart_ico_on_m.png") center no-repeat;
+  background-size: cover;
+}
+.share-on-button {
+  background: url("../image/mobile/icon/share_ico_on_m.png") center no-repeat;
+  background-size: cover;
+}
+.share-off-button {
+  background: url("../image/mobile/icon/share_ico_off_m.png") center no-repeat;
+  background-size: cover;
+}
+.twitter-button {
+  background: url("../image/desktop/twitter_btn.png") center no-repeat;
+  background-size: cover;
+}
+.discord-button {
+  background: url("../image/desktop/discord_btn.png") center no-repeat;
+  background-size: contain;
+}
+.vote-button {
+  background: url("../image/desktop/Vote_now_btn.png") center no-repeat;
+  background-size: contain;
+}
+.result-button {
+  background: url("../image/desktop/result_btn.png") center no-repeat;
+  background-size: cover;
+}
+.gameinfo-button {
+  background: url("../image/mobile/icon/gameinfo_ico_m.png") center no-repeat;
+  background-size: cover;
+}
 @media (max-width: 640px) {
   .enter-button {
     width: 290px;
     height: 60px;
+  }
+  .discord-button {
+    background: url("../image/mobile/brd_discord_btn.png") center no-repeat;
+    background-size: contain;
+  }
+  .twitter-button {
+    background: url("../image/mobile/brd_twitter_btn.png") center no-repeat;
+    background-size: contain;
   }
 }
 
@@ -214,18 +372,38 @@ footer > .sns-icons {
 }
 .enter-login-bar {
   max-width: 1240px;
-  max-height: 104px;
+  min-height: 104px;
   background: url("../image/desktop/enter_login_bar_bg.png") center no-repeat;
   background-size: cover;
 }
 .status-bar {
-  max-width: 1240px;
-  max-height: 569px;
-
-  width: 100%;
-  height: 100%;
   background: url("../image/desktop/status_bar_bg.png") center no-repeat;
   background-size: cover;
+  border-radius: 10px;
+}
+.list-box-bg {
+  background: url("../image/desktop/status_bar_bg.png") center no-repeat;
+  background-size: cover;
+}
+.prince-image {
+  width: 809px;
+  height: 677.9px;
+  margin: 0 auto;
+  background: url("../image/desktop/Prince_all.png") center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 748px) {
+  .prince-image {
+    width: 489px;
+    height: 443px;
+  }
+}
+@media (max-width: 640px) {
+  .prince-image {
+    width: 289px;
+    height: 243px;
+  }
 }
 
 /* icon */
@@ -248,4 +426,116 @@ footer > .sns-icons {
   background: url("../image/desktop/icon/pass_ico.png") center no-repeat;
   background-size: cover;
   display: inline-block;
+}
+.share-icon {
+  background: url("../image/desktop/icon/share.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.heart-icon {
+  background: url("../image/desktop/icon/heart_ico_s.png") center no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.filter-icon {
+  background: url("../image/desktop/icon/filter_ico.png") center no-repeat;
+  background-size: contain;
+}
+.back-icon {
+  background: url("../image/mobile/icon/back_btn_m.png") center no-repeat;
+  background-size: contain;
+}
+.discode-icon {
+  background: url("../image/desktop/icon/ discord_ico_no_bg.png") center
+    no-repeat;
+  background-size: contain;
+}
+.email-icon {
+  background: url("../image/desktop/icon/mail_ico.png") center no-repeat;
+  background-size: contain;
+}
+.up-icon {
+  background: url("../image/desktop/icon/chevron_up_ico.png") center no-repeat;
+  background-size: contain;
+}
+.down-icon {
+  background: url("../image/desktop/icon/chevron_down_ico.png") center no-repeat;
+  background-size: contain;
+}
+
+/* tag */
+.tag {
+  width: 107px;
+  height: 40px;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 20px;
+  border-radius: 29px;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff13e7;
+}
+.tag.poll {
+  border: solid 1px #13e8f5;
+  color: #13e8f5;
+}
+.tag.quiz {
+  border: solid 1px #811fff;
+  color: #811fff;
+}
+.tag.event {
+  border: solid 1px #ff13e7;
+  color: #ff13e7;
+}
+.tag.news {
+  border: solid 1px #fff500;
+  color: #fff500;
+}
+.tag.disabled {
+  border: solid 1px #8a8a8a;
+  color: #8a8a8a;
+}
+.border-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 29px;
+  border: solid 2px #363636;
+}
+.bg-tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 29px;
+  background-color: #363636;
+}
+.point-bg-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background-color: #5865f2;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .only-desktop {
+    display: none !important;
+  }
 }

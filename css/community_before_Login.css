@@ -1,10 +1,7 @@
 main {
-  background-color: #050505;
   position: relative;
   padding-bottom: 299px;
-  padding-top: 143px;
 }
-
 .bg {
   background: url("../image/desktop/spot_bg.png") center no-repeat;
   background-size: cover;
@@ -12,27 +9,29 @@ main {
   height: 734px;
   overflow: hidden;
 }
-.prince-image {
-  width: 809px;
-  height: 677.9px;
-  margin: 0 auto;
-  background: url("../image/desktop/Prince_all.png") center no-repeat;
-  background-size: cover;
+.star-bg {
+  padding-top: 143px;
+  position: relative;
+}
+.page-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 20px;
 }
 .status-bar {
-  position: absolute;
-  top: 407px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 4px;
   padding: 40px;
-
-  max-height: 218px;
 }
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.buttons > button + button {
+  margin-left: 30px;
 }
 .get-more-happy {
   max-width: 571px;
@@ -50,20 +49,6 @@ main {
   background: url("../image/mobile/WELCOME_title.png") center no-repeat;
   background-size: cover;
 }
-.join-us-button {
-  background: url("../image/desktop/join_us_btn.png") center no-repeat;
-  background-size: contain;
-  width: 330px;
-  height: 70px;
-}
-.login-button {
-  background: url("../image/desktop/login_btn.png") center no-repeat;
-  background-size: contain;
-  width: 330px;
-  height: 70px;
-  margin-left: 30px;
-}
-
 .list-header {
   max-width: 1240px;
   height: 228px;
@@ -76,16 +61,11 @@ main {
   align-items: center;
   font-family: Audiowide;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: left;
   color: #818181;
   padding: 37px 50px;
 }
-.breadcrumb > div + div {
+.breadcrumb-level {
   margin-left: 15px;
   vertical-align: middle;
 }
@@ -93,19 +73,13 @@ main {
   width: 16px;
   height: 16px;
   vertical-align: text-top;
-  margin-right: 5px;
-  display: inline-block;
-  background: url("../image/desktop/page_nav_circle.png") center no-repeat;
-  background-size: contain;
 }
 .community-title {
   width: 138px;
   height: 20px;
-
   background: url("../image/desktop/community_tit.png") center no-repeat;
   background-size: contain;
 }
-
 .list-filter {
   display: flex;
   align-items: center;
@@ -119,25 +93,16 @@ main {
 .hypper {
   font-family: Audiowide;
   font-size: 36px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: left;
   color: #fff;
 }
 .filter-icon {
   width: 23.4px;
   height: 21px;
-
-  background: url("../image/desktop/icon/filter_ico.png") center no-repeat;
-  background-size: contain;
 }
 .list-filter > div > .tag {
   margin-left: 10px;
 }
-
 .list {
   display: flex;
   align-items: center;
@@ -145,9 +110,8 @@ main {
   flex-wrap: wrap;
   margin: -20px auto;
 
-  max-width: 1240px;
+  max-width: 1280px;
 }
-
 .list-item {
   flex: 1 1 calc(50% - 40px);
   display: flex;
@@ -159,48 +123,6 @@ main {
   padding: 45px 40px;
   margin: 20px;
   border-radius: 10px;
-}
-.tag {
-  width: 107px;
-  height: 40px;
-  flex-grow: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 20px;
-  border-radius: 29px;
-
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 600;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ff13e7;
-}
-.tag.poll {
-  border: solid 1px #13e8f5;
-  color: #13e8f5;
-}
-.tag.quiz {
-  border: solid 1px #811fff;
-  color: #811fff;
-}
-.tag.event {
-  border: solid 1px #ff13e7;
-  color: #ff13e7;
-}
-.tag.news {
-  border: solid 1px #fff500;
-  color: #fff500;
-}
-.tag.disabled {
-  border: solid 1px #8a8a8a;
-  color: #8a8a8a;
-}
-.list-item {
   cursor: pointer;
 }
 .list-item-text {
@@ -209,11 +131,7 @@ main {
 .list-item-title {
   font-family: Sora;
   font-size: 25px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.12;
-  letter-spacing: normal;
   text-align: left;
   color: #fff;
 
@@ -227,10 +145,7 @@ main {
   font-family: Inter;
   font-size: 15px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.33;
-  letter-spacing: normal;
   text-align: left;
   color: #969696;
   margin-top: 15px;
@@ -249,19 +164,10 @@ main {
   margin-right: 5px;
   padding-left: 20px;
 }
-.list-item-info-icon.share {
-  background: url("../image/desktop/icon/share.png") center no-repeat;
-  background-size: contain;
-}
-.list-item-info-icon.heart {
-  background: url("../image/desktop/icon/heart_ico_s.png") center no-repeat;
-  background-size: contain;
-}
 .pagination {
   text-align: center;
   margin-top: 120px;
 }
-
 .pagination a {
   text-decoration: none;
   margin: 5px;
@@ -271,15 +177,14 @@ main {
   color: #fff;
   display: inline-block;
 }
-
 .pagination a.active {
   background-color: #494949;
 }
 
-#menu-icon {
+#filter-icon {
   position: relative;
 }
-#menu {
+#filter-menu {
   position: absolute;
   top: 26px;
   right: 3px;
@@ -293,55 +198,35 @@ main {
 
   display: none;
 }
-#menu.clicked {
+#filter-menu.clicked {
   display: block;
 }
-#menu > button + button {
+#filter-menu > button + button {
   margin-top: 10px;
 }
-
+@media (max-width: 1240px) {
+  .list-header {
+    background-size: cover;
+  }
+}
 @media (max-width: 748px) {
-  body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  main {
-    padding-bottom: 80px;
-    flex: 1 1 auto;
-  }
-  .bg {
-    padding-top: 72px;
-    height: 380px;
-  }
-  .prince-image {
-    width: 289px;
-    height: 243px;
-  }
-  .status {
-    top: 194px;
-    padding: 20px;
-    width: calc(100% - 40px);
-    height: unset;
-  }
-  .get-more-happy {
+  .list-filter > div > .tag,
+  .breadcrumb {
     display: none;
   }
-  .welcome {
-    display: block;
+  main {
+    padding-bottom: 0;
   }
-  .buttons {
-    flex-direction: column;
+  .bg {
+    height: 400px;
   }
-  .buttons > button {
-    width: 295px;
-    height: 42px;
-    margin-top: 16px;
+  .star-bg {
+    padding-top: 62px;
   }
-  .login-button {
-    margin-left: 0;
+  .status-bar {
+    padding: 20px;
+    top: 65%;
   }
-
   .list {
     margin: 0;
   }
@@ -361,6 +246,9 @@ main {
   .list-item-title {
     font-size: 15px;
   }
+  .list-item-info {
+    font-size: 11px;
+  }
   .list-item-text {
     margin-left: 0;
     margin-top: 10px;
@@ -370,10 +258,6 @@ main {
     top: 16px;
     right: 20px;
     margin-top: 0;
-  }
-  .list-filter > div > .tag,
-  .breadcrumb {
-    display: none;
   }
   .hypper {
     font-size: 20px;
@@ -392,5 +276,27 @@ main {
   }
   .pagination > a {
     padding: 8px 12px;
+  }
+}
+@media (max-width: 640px) {
+  .bg {
+    height: 300px;
+  }
+  .get-more-happy {
+    display: none;
+  }
+  .welcome {
+    display: block;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons > button {
+    width: 295px;
+    height: 42px;
+    margin-top: 16px;
+  }
+  .buttons > button + button {
+    margin-left: 0;
   }
 }

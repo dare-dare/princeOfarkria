@@ -1,10 +1,12 @@
-main {
-  background-color: #050505;
-  position: relative;
-  height: calc(100vh - 60px);
-  padding-top: 143px;
+hr {
+  margin: 25px 0 15px;
 }
 
+main {
+  position: relative;
+  min-height: 1838px;
+  height: 100%;
+}
 .bg {
   background: url("../image/desktop/spot_bg.png") center no-repeat;
   background-size: cover;
@@ -12,81 +14,75 @@ main {
   height: 734px;
   overflow: hidden;
 }
-.prince-image {
-  width: 809px;
-  height: 677.9px;
-  margin: 0 auto;
-  background: url("../image/desktop/Prince_all.png") center no-repeat;
-  background-size: cover;
+.star-bar {
+  padding-top: 143px;
 }
-.box {
+.page-content {
   position: absolute;
   top: 407px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 4px;
-  width: 1240px;
-  height: 833px;
-  color: #fff;
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 20px;
+  color: #aaaaaa;
 }
 .status-bar {
-  max-height: 833px;
+  padding: 40px 50px;
+  text-align: center;
 }
-
 .breadcrumb {
   display: flex;
   align-items: center;
   font-family: Audiowide;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
   color: #818181;
-  padding: 40px 50px 20px;
 }
-.breadcrumb > div + div {
+.breadcrumb-level {
   margin-left: 15px;
   vertical-align: middle;
 }
-.login-title {
+.circle-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+}
+.breadcrumb-title {
   width: 69px;
   height: 20px;
   background: url("../image/desktop/login_title.png") center no-repeat;
   background-size: contain;
 }
-.welcome {
+.content-title {
   font-family: Audiowide;
   font-size: 36px;
   color: #fff;
   margin: 30px auto;
 }
 .input {
+  display: block;
   max-width: 500px;
   width: 100%;
-  height: 56px;
   flex-grow: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding: 20px;
   border-radius: 4px;
   background-color: #222;
-  margin: 0 auto;
+  margin: 0 auto 25px;
+  border: none;
 }
-.input + .input {
-  margin-top: 25px;
+.enter-login-bar {
+  margin: 60px auto 0;
+  padding: 42px 50px;
+  border-radius: 10px;
 }
+
+/* page custom */
 .join-button {
   margin-top: 30px;
 }
 .code-inputs {
   margin: 40px auto;
   max-width: 500px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,10 +93,12 @@ main {
   flex-grow: 0;
   border-radius: 2px;
   background-color: #373737;
+  border: none;
 }
 .desc {
   max-width: 500px;
   margin: 15px auto;
+  text-align: left;
 }
 .point-text {
   font-family: Inter;
@@ -110,58 +108,106 @@ main {
   text-decoration: underline;
   margin-top: 40px;
 }
-.enter-login-bar {
+label {
+  margin-left: 7.5px;
+  flex: 1 1 auto;
+}
+.enter-login-bar > div:not(#more-content) {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 60px auto;
-  height: 100%;
-  padding: 0 52.5px;
 }
-label {
-  margin-left: 7.5px;
+.up-icon,
+.down-icon {
+  width: 24px;
+  height: 24px;
+}
+.up-icon,
+#more-content {
+  display: none;
+}
+#more-content {
+  border-top: 1px solid #302f2f;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+#more-content.clicked {
+  display: block;
+}
+#more-content > div {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #222;
+
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #aaa;
 }
 
 @media (max-width: 640px) {
   main {
-    height: calc(100vh - 122px);
-    padding-bottom: 80px;
+    min-height: 1000px;
+  }
+  .breadcrumb,
+  hr {
+    display: none;
+  }
+  .mobile {
+    display: block;
   }
   .bg {
     height: 375px;
   }
-  .absolute-box {
-    top: 180px;
+  .star-bg {
+    padding-top: 76px;
   }
-  .prince-image {
-    width: 289px;
-    height: 243px;
+  .page-content {
+    top: 150px;
   }
   .status-bar {
     padding: 32px 20px;
-    top: 220px;
-    height: auto;
   }
-  .lets-hyper {
+  .content-title {
+    background: url("../image/mobile/WELCOME_title.png") center no-repeat;
+    background-size: contain;
+    height: 20px;
     margin: 0 0 24px;
-    font-size: 20px;
   }
-  .breadcrumb {
-    display: none;
+  .input {
+    padding: 16px 20px;
   }
-  hr {
-    display: none;
+  .enter-login-bar {
+    margin: 40px auto 0;
+    flex-direction: column;
+    padding: 24px 20px;
   }
-  .login-button {
+  .enter-login-bar + .enter-login-bar {
+    margin: 20px auto 0;
+  }
+  .join-button {
     margin-top: 24px;
+    width: 295px;
+    height: 42px;
+  }
+  .code-inputs {
+    margin: 40px auto 15px;
   }
   .input {
     margin: 0 auto 16px;
-    height: 48px;
   }
-  .enter-login-bar {
-    margin: 126px auto;
-    flex-direction: column;
-    padding: 24px 20px;
+  .code-input {
+    width: 40px;
+    height: 40px;
+  }
+  .code-input + .code-input {
+    margin-left: 11px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+  .point-text {
+    margin-top: 20px;
   }
 }
