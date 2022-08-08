@@ -126,6 +126,9 @@ nav {
     margin-left: 0;
     height: 24px;
   }
+  footer {
+    padding: 0;
+  }
 }
 
 /* menu */

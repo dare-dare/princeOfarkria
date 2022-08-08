@@ -114,7 +114,7 @@ main {
     min-height: 656px;
   }
   .breadcrumb,
-  hr {
+  .status-bar > hr {
     display: none;
   }
   .mobile {

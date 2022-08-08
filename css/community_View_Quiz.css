@@ -395,6 +395,13 @@ article {
   text-align: center;
   margin-top: 62px;
 }
+.bg-tag {
+  font-size: 20px;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-right: 15px;
+  color: #fff500;
+}
 
 @media (max-width: 640px) {
   hr.mobile {
@@ -486,13 +493,6 @@ article {
 }
 .date + .date {
   margin-left: 30px;
-}
-.bg-tag {
-  font-size: 20px;
-  display: inline-block;
-  padding: 8px 20px;
-  margin-right: 15px;
-  color: #fff500;
 }
 .vote-options {
   margin-top: 63px;

@@ -273,6 +273,7 @@ main {
   }
   .pagination {
     margin-top: 20px;
+    border-radius: 4px;
   }
   .pagination > a {
     padding: 8px 12px;
@@ -280,7 +281,7 @@ main {
 }
 @media (max-width: 640px) {
   .bg {
-    height: 300px;
+    height: 350px;
   }
   .get-more-happy {
     display: none;
