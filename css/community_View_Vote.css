@@ -469,6 +469,9 @@ article {
   .box-content-title {
     flex-direction: column;
   }
+  .box-title-title {
+    font-size: 15px;
+  }
 }
 
 .date {

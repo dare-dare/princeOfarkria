@@ -646,3 +646,43 @@ footer > .sns-icons {
     display: none !important;
   }
 }
+
+input[type="checkbox"] {
+  appearance: none;
+  background: url("../image/desktop/icon/square.png") center no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  vertical-align: middle;
+}
+input[type="checkbox"]:checked {
+  appearance: none;
+  background: url("../image/desktop/icon/check-square.png") center no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  vertical-align: middle;
+}
+/* input[type="checkbox"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  position: relative;
+}
+input[type="checkbox"]:checked + label {
+  border: 3px solid #4a77bb;
+}
+input[type="checkbox"]:checked + label::after {
+  content: "✔";
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #4a77bb;
+} */
