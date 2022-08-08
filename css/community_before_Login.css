@@ -22,9 +22,6 @@ main {
   width: 100%;
   padding: 0 20px;
 }
-.status-bar {
-  padding: 40px;
-}
 .buttons {
   display: flex;
   align-items: center;
@@ -38,7 +35,7 @@ main {
   height: 48px;
   margin: 0 auto 20px;
   background: url("../image/desktop/Title.png") center no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .welcome {
   display: none;
@@ -47,7 +44,7 @@ main {
   margin: 0 auto;
 
   background: url("../image/mobile/WELCOME_title.png") center no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .list-header {
   max-width: 1240px;
@@ -66,8 +63,10 @@ main {
   padding: 30px 50px;
 }
 .breadcrumb-level {
-  margin-left: 15px;
   vertical-align: middle;
+}
+.breadcrumb-level + .breadcrumb-level {
+  margin-left: 15px;
 }
 .circle-icon {
   width: 16px;
@@ -214,9 +213,6 @@ main {
   .breadcrumb {
     display: none;
   }
-  main {
-    padding-bottom: 0;
-  }
   .bg {
     height: 400px;
   }
@@ -224,7 +220,6 @@ main {
     padding-top: 62px;
   }
   .status-bar {
-    padding: 20px;
     top: 65%;
   }
   .list {

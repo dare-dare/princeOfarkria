@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>main</title>
+    <link rel="stylesheet" type="text/css" href="./css/main_fix.css" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
-    <link rel="stylesheet" type="text/css" href="./css/community_Login.css" />
   </head>
   <body>
     <select
@@ -28,12 +28,12 @@
         width: 30% !important;
       "
     >
-      <option value="main_fix.html">Main_fix</option>
+      <option value="main_fix.html" selected>Main_fix</option>
       <option value="main_fix_menu_before.html">Main_fix_menu_before</option>
       <option value="community_before_Login.html">
         community_before_Login
       </option>
-      <option value="community_Login.html" selected>community_Login</option>
+      <option value="community_Login.html">community_Login</option>
       <option value="community_Join.html">community_Join</option>
       <option value="community_Pass_Holder.html">community_Pass_Holder</option>
       <option value="community_common.html">community_common</option>
@@ -77,9 +77,7 @@
     </div>
     <main>
       <nav>
-        <a href="/" target="_blank" class="nav-logo only-desktop"> </a>
-        <a class="back-icon mobile"></a>
-        <div class="nav-title mobile">LOGIN</div>
+        <a href="/" target="_blank" class="nav-logo"> </a>
         <div class="nav-right">
           <div class="sns-icons">
             <a href="/" target="_blank" class="sns-icon discord"></a>
@@ -90,64 +88,72 @@
           <div id="menu-icon" class="menu-icon"></div>
         </div>
       </nav>
-      <div class="bg">
+      <section class="bg">
         <div class="star-bg">
-          <div class="prince-image"></div>
-        </div>
-      </div>
-      <section class="page-content">
-        <div class="status-bar-wrapper">
-          <div class="status-bar">
-            <div class="breadcrumb">
-              <div class="breadcrumb-level">
-                <div class="circle-icon"></div>
-                PRINCE of Arkria
-              </div>
-              <div class="breadcrumb-level">>></div>
-              <div class="breadcrumb-level">
-                <div class="breadcrumb-title"></div>
-              </div>
+          <div class="center-cube">
+            <div class="left-cube">
+              <div class="line"></div>
             </div>
-            <hr />
-            <div class="content-title only-desktop">LET'S HYPER!</div>
-            <div class="content-title mobile"></div>
-            <input
-              class="input"
-              type="text"
-              placeholder="Please enter your email."
-            />
-            <input
-              class="input"
-              type="text"
-              placeholder="Please enter your password."
-            />
-            <div class="login-optins">
-              <div>
-                <input type="checkbox" id="check" />
-                <label for="check">Remember my account</label>
-              </div>
-              <div>
-                <a href="/" target="_self">Forget E-mail</a>
-                /
-                <a href="/" target="_self">Password?</a>
-              </div>
+            <div class="right-cube"></div>
+          </div>
+          <div class="contents">
+            <div class="welcome-title"></div>
+            <div class="prince-img">
+              <button class="enter-button"></button>
             </div>
-            <button class="login-button"></button>
+            <div class="text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+                tincidunt eget nullam non. Quis hendrerit dolor magna eget est
+                lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet
+                massa.
+              </p>
+              <p>
+                Commodo odio aenean sed adipiscing diam donec adipiscing
+                tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor
+                augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui
+                vivamus arcu felis. Egestas integer eget aliquet nibh praesent.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="enter-login-bar">
-          <span class="join-desc">Are you not a member yet? Play now!</span>
-          <hr class="dotted-line" />
-          <a class="join" href="/" target="_self">JOIN US</a>
+      </section>
+      <section>
+        <div class="play-text">
+          <img src="image/desktop/cnt_tit_01.png" alt="JUST ENJOY! PLAY NOW!" />
+        </div>
+      </section>
+      <section class="community">
+        <div class="contents">
+          <img class="number-icon" src="image/desktop/cnt_no_01.png" alt="01" />
+          <p class="text">
+            You can apply for an event and vote in the community!
+          </p>
+          <div class="shadow-image"></div>
+          <button class="community-button"></button>
+        </div>
+      </section>
+      <section class="game-info">
+        <div class="contents">
+          <img class="number-icon" src="image/desktop/cnt_no_02.png" alt="02" />
+          <p class="text">
+            HYPER Cubic can be earned by game and exchanged for HYCO.
+          </p>
+          <div class="phone-image">
+            <div class="exchange-image"></div>
+            <div class="element-image"></div>
+          </div>
+          <button class="game-start-button"></button>
         </div>
       </section>
     </main>
     <footer>
       <div class="sns-icons">
-        <a href="/" target="_blank" class="sns-icon discord"> </a>
-        <a href="/" target="_blank" class="sns-icon insta"> </a>
-        <a href="/" target="_blank" class="sns-icon youtube"> </a>
-        <a href="/" target="_blank" class="sns-icon twitter"> </a>
+        <a href="/" target="_blank" class="sns-icon discord"></a>
+        <a href="/" target="_blank" class="sns-icon insta"></a>
+        <a href="/" target="_blank" class="sns-icon youtube"></a>
+        <a href="/" target="_blank" class="sns-icon twitter"></a>
       </div>
       <div class="footer-left">
         <a href="/" target="_self">Privacy policy</a> |
@@ -159,23 +165,6 @@
       </div>
     </footer>
     <script>
-      const main = document.getElementsByTagName("main")[0];
-      const bg = document
-        .getElementsByClassName("bg")[0]
-        .getBoundingClientRect();
-      const absoluteBox = document
-        .getElementsByClassName("page-content")[0]
-        .getBoundingClientRect();
-      const absoluteBoxHeight =
-        document.getElementsByClassName("page-content")[0].offsetHeight;
-      const overflowHeight =
-        absoluteBoxHeight - (absoluteBox.top - bg.bottom) * -1;
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const wrapperHeight = main.offsetHeight;
-        main.style.height = wrapperHeight + overflowHeight + "px";
-      });
-
       const menuIcon = document.getElementById("menu-icon");
       const close = document.getElementsByClassName("close-icon")[0];
       const clickedClass = "clicked";

@@ -1,0 +1,305 @@
+hr {
+  margin: 30px 0;
+}
+.mobile {
+  display: none;
+}
+main {
+  background-color: #050505;
+  position: relative;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-family: Audiowide;
+  font-size: 14px;
+  color: #818181;
+}
+.breadcrumb > span + span {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.circle-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+}
+ß .bg {
+  background: url("../image/desktop/spot_bg.png") center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 734px;
+  overflow: hidden;
+}
+.star-bg {
+  padding-top: 143px;
+}
+section {
+  position: absolute;
+  top: 407px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1280px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.breadcrumb {
+  padding: 0;
+  text-align: left;
+}
+.mypage-title {
+  width: 69px;
+  height: 20px;
+  background: url("../image/desktop/my_page_title.png") center no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.info > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-left {
+  flex: 1 1 auto;
+}
+.user {
+  display: flex;
+  align-items: center;
+}
+.user-image {
+  width: 70px;
+  height: 70px;
+}
+.user-name {
+  font-family: Sora;
+  font-size: 23px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+
+  margin-left: 20px;
+}
+.ruby {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Sora;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff500;
+}
+.ruby-image {
+  width: 25.8px;
+  height: 48px;
+  background: url("../image/desktop/cubic.png") center no-repeat;
+  background-size: cover;
+  margin-right: 8px;
+}
+.history-tag {
+  margin-left: 8px;
+}
+.info-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 24px;
+  background-color: #282828;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+
+  margin-left: 15px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+.copy {
+  margin-left: 4px;
+}
+.user-info {
+  max-width: 500px;
+  width: 100%;
+  height: 64px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #222;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1;
+  color: #818181;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0 auto;
+}
+.user-info-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 9px;
+  vertical-align: middle;
+}
+.user-info + .user-info {
+  margin-top: 25px;
+}
+.user-info-text {
+  flex: 1 1 auto;
+}
+.bg-tag {
+  padding: 12px 16px;
+  color: #a5a5a5;
+}
+
+@media (max-width: 748px) {
+  .info {
+    padding: 24px 20px;
+  }
+  .info-button {
+    padding: 5px 12px;
+    font-size: 11px;
+    margin-left: 0;
+  }
+  .info-button > .icon {
+    width: 16px;
+    height: 16px;
+  }
+  .info-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .info-buttons > .info-button {
+    font-size: 8px;
+    padding: 3px;
+  }
+  .info-buttons > .info-button + .info-button {
+    margin-left: 4px;
+  }
+  .info-buttons > .info-button > .pass-icon {
+    width: 9px;
+    height: 9px;
+  }
+  .user-info {
+    font-size: 14px;
+  }
+  .user-info-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .connect {
+    font-size: 13px;
+  }
+  .user-image {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: solid 2px #ee2a37;
+    background-color: #d9d9d9;
+  }
+  .user-name-wrapper {
+    margin-left: 4px;
+  }
+  .user-name {
+    font-size: 13px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 640px) {
+  main {
+    padding-bottom: 0;
+  }
+  .info {
+    background: url("../image/desktop/status_bar_bg.png") center no-repeat;
+    background-size: cover;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .nav-title {
+    font-family: Audiowide;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #fff;
+  }
+  .back-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .menu-icon {
+    margin-left: 0;
+  }
+  .bg {
+    height: 375px;
+    padding-top: 40px;
+    display: block;
+  }
+  .star-bg {
+    padding-top: 36px;
+  }
+  section {
+    top: 100px;
+  }
+  .status-bar-wrapper {
+    background: none;
+    border: none;
+  }
+  .info,
+  .user-info-wrapper {
+    border-radius: 4px;
+  }
+  .status-bar {
+    padding: 0;
+  }
+  .ruby {
+    font-size: 18px;
+  }
+  .ruby-image {
+    width: 19.3px;
+    height: 36px;
+    margin-right: 4px;
+  }
+  .history-tag {
+    margin-left: 4px;
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  .bg-tag {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logout-button,
+  .ok-button {
+    width: 100%;
+  }
+}

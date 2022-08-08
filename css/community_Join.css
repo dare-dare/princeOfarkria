@@ -4,8 +4,7 @@ hr {
 
 main {
   position: relative;
-  min-height: 1838px;
-  height: 100%;
+  padding-bottom: 264px;
 }
 .bg {
   background: url("../image/desktop/spot_bg.png") center no-repeat;
@@ -28,7 +27,6 @@ main {
   color: #aaaaaa;
 }
 .status-bar {
-  padding: 40px 50px;
   text-align: center;
 }
 .breadcrumb {
@@ -39,8 +37,10 @@ main {
   color: #818181;
 }
 .breadcrumb-level {
-  margin-left: 15px;
   vertical-align: middle;
+}
+.breadcrumb-level + .breadcrumb-level {
+  margin-left: 15px;
 }
 .circle-icon {
   width: 16px;
@@ -70,10 +70,18 @@ main {
   margin: 0 auto 25px;
   border: none;
 }
-.enter-login-bar {
+.status-bar-wrapper {
   margin: 60px auto 0;
-  padding: 42px 50px;
-  border-radius: 10px;
+}
+
+.join-checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.join-checkbox > label {
+  text-align: left;
 }
 
 /* page custom */
@@ -112,11 +120,6 @@ label {
   margin-left: 7.5px;
   flex: 1 1 auto;
 }
-.enter-login-bar > div:not(#more-content) {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 .up-icon,
 .down-icon {
   width: 24px;
@@ -130,6 +133,7 @@ label {
   border-top: 1px solid #302f2f;
   margin-top: 20px;
   padding-top: 20px;
+  text-align: left;
 }
 #more-content.clicked {
   display: block;
@@ -150,9 +154,6 @@ label {
 }
 
 @media (max-width: 640px) {
-  main {
-    min-height: 1000px;
-  }
   .breadcrumb,
   .status-bar > hr {
     display: none;
@@ -181,12 +182,11 @@ label {
   .input {
     padding: 16px 20px;
   }
-  .enter-login-bar {
-    margin: 40px auto 0;
+  .status-bar-wrapper {
+    margin: 0;
     flex-direction: column;
-    padding: 24px 20px;
   }
-  .enter-login-bar + .enter-login-bar {
+  .status-bar-wrapper + .status-bar-wrapper {
     margin: 20px auto 0;
   }
   .join-button {

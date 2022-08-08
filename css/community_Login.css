@@ -3,8 +3,7 @@ hr {
 }
 main {
   position: relative;
-  min-height: 1420px;
-  height: 100%;
+  padding-bottom: 280px;
 }
 .bg {
   background: url("../image/desktop/spot_bg.png") center no-repeat;
@@ -26,7 +25,6 @@ main {
   padding: 0 20px;
 }
 .status-bar {
-  padding: 40px 50px;
   text-align: center;
 }
 .breadcrumb {
@@ -37,8 +35,10 @@ main {
   color: #818181;
 }
 .breadcrumb-level {
-  margin-left: 15px;
   vertical-align: middle;
+}
+.breadcrumb-level + .breadcrumb-level {
+  margin-left: 15px;
 }
 .circle-icon {
   width: 16px;
@@ -110,9 +110,9 @@ main {
 }
 
 @media (max-width: 640px) {
-  main {
+  /* main {
     min-height: 656px;
-  }
+  } */
   .breadcrumb,
   .status-bar > hr {
     display: none;
@@ -140,6 +140,7 @@ main {
   }
   .input {
     padding: 16px 20px;
+    margin: 0 auto 16px;
   }
   .enter-login-bar {
     margin: 20px auto 0;

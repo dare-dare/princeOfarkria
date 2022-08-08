@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>community quiz</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/community.css" />
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -77,7 +79,7 @@
         <a href="/" target="_blank" class="sns-icon youtube"></a>
         <a href="/" target="_blank" class="sns-icon twitter"></a>
       </div>
-      <div>
+      <div class="links">
         <a href="/" target="_self" class="logout">LOGOUT</a>
       </div>
     </div>
@@ -100,57 +102,62 @@
         <div class="star-bg">
           <div class="prince-image"></div>
           <div class="user-content">
-            <div class="status-bar">
-              <div class="info">
-                <div class="info-left">
-                  <div class="user">
-                    <div class="user-image">
-                      <img src="image/desktop/user_img.png" alt="user image" />
-                    </div>
-                    <div>
-                      <p class="user-name">youngkun</p>
-                      <div class="info-buttons mobile">
-                        <div class="info-button">
-                          <span class="icon pass-icon"></span>
-                          <span>PASS</span>
+            <div class="status-bar-wrapper">
+              <div class="status-bar">
+                <div class="info">
+                  <div class="info-left">
+                    <div class="user">
+                      <div class="user-image">
+                        <img
+                          src="image/desktop/user_img.png"
+                          alt="user image"
+                        />
+                      </div>
+                      <div>
+                        <p class="user-name">youngkun</p>
+                        <div class="info-buttons mobile">
+                          <div class="info-button">
+                            <span class="icon pass-icon"></span>
+                            <span>PASS</span>
+                          </div>
+                          <div class="info-button">NFT HOLDER</div>
                         </div>
-                        <div class="info-button">NFT HOLDER</div>
                       </div>
                     </div>
+                    <div class="ruby">
+                      <div class="ruby-image"></div>
+                      <div><span class="only-desktop">CUBIC</span> 12,500</div>
+                    </div>
                   </div>
-                  <div class="ruby">
-                    <div class="ruby-image"></div>
-                    <div><span class="only-desktop">CUBIC</span> 12,500</div>
+                  <div id="more-contents" class="info-right">
+                    <div class="info-button only-desktop">
+                      <span class="icon pass-icon"></span>
+                      <span>PASS</span>
+                    </div>
+                    <div class="info-button only-desktop">NFT HOLDER</div>
+                    <div class="info-button">
+                      <span class="icon wallet-icon"></span>
+                      <span>on</span>
+                    </div>
+                    <div class="info-button">
+                      <span class="icon invite-icon"></span>
+                      <span>Invite Code</span>
+                      <a class="point-bg-tag">COPY</a>
+                    </div>
+                  </div>
+                  <div id="more-button">
+                    <button class="inner-close-button"></button>
+                    <button class="inner-open-button"></button>
                   </div>
                 </div>
-                <div id="more-contents" class="info-right">
-                  <div class="info-button only-desktop">
-                    <span class="icon pass-icon"></span>
-                    <span>PASS</span>
-                  </div>
-                  <div class="info-button only-desktop">NFT HOLDER</div>
-                  <div class="info-button">
-                    <span class="icon wallet-icon"></span>
-                    <span>on</span>
-                  </div>
-                  <div class="info-button">
-                    <span class="icon invite-icon"></span>
-                    <span>Invite Code</span>
-                    <a class="point-bg-tag">COPY</a>
-                  </div>
+                <hr />
+                <div class="button-wrapper">
+                  <p class="only-desktop">
+                    HYPER Cubic can be earned by game and exchanged for HYCO.
+                  </p>
+                  <button class="gameinfo-button mobile"></button>
+                  <button class="game-button"></button>
                 </div>
-                <div id="more-button">
-                  <button class="inner-close-button"></button>
-                  <button class="inner-open-button"></button>
-                </div>
-              </div>
-              <hr />
-              <div class="button-wrapper">
-                <p class="only-desktop">
-                  HYPER Cubic can be earned by game and exchanged for HYCO.
-                </p>
-                <button class="gameinfo-button mobile"></button>
-                <button class="game-button"></button>
               </div>
             </div>
           </div>
@@ -162,8 +169,8 @@
             <span class="breadcrumb-level"
               ><span class="circle-icon"></span>PRINCE of Arkria
             </span>
-            <span>>></span>
-            <span
+            <span class="breadcrumb-level">>></span>
+            <span class="breadcrumb-level"
               ><img
                 class="community-title"
                 src="image/desktop/community_tit.png"
@@ -192,42 +199,46 @@
             </div>
           </div>
         </section>
-        <section class="box-content status-bar">
-          <hr class="mobile" />
-          <div class="box-content-title">
-            <div class="bg-tag">No.23 Quiz</div>
-            <div>
-              <div class="discord-button"></div>
-              <div class="twitter-button"></div>
+        <section class="box-content">
+          <div class="status-bar-wrapper">
+            <div class="status-bar">
+              <hr class="mobile" />
+              <div class="box-content-title">
+                <div class="bg-tag">No.23 Quiz</div>
+                <div>
+                  <div class="discord-button"></div>
+                  <div class="twitter-button"></div>
+                </div>
+              </div>
+              <hr />
+              <p>
+                I have no face. I have no legs and no arms. The color of my
+                round body is white or light brown. You can eat me fried or
+                boiled. My mother is a hen.
+              </p>
+              <hr class="mobile" />
+              <div class="vote-options">
+                <div class="vote-option">
+                  <input type="checkbox" id="check" />
+                  <label for="check">Answer 01</label>
+                </div>
+                <div class="vote-option">
+                  <input type="checkbox" id="check" />
+                  <label for="check">Answer 02</label>
+                </div>
+                <div class="vote-option checked">
+                  <input type="checkbox" id="check" checked />
+                  <label for="check">Answer 03</label>
+                </div>
+                <div class="vote-option">
+                  <input type="checkbox" id="check" />
+                  <label for="check">Answer 04</label>
+                </div>
+              </div>
+              <div class="button">
+                <button class="result-button"></button>
+              </div>
             </div>
-          </div>
-          <hr />
-          <p>
-            I have no face. I have no legs and no arms. The color of my round
-            body is white or light brown. You can eat me fried or boiled. My
-            mother is a hen.
-          </p>
-          <hr class="mobile" />
-          <div class="vote-options">
-            <div class="vote-option">
-              <input type="checkbox" id="check" />
-              <label for="check">Answer 01</label>
-            </div>
-            <div class="vote-option">
-              <input type="checkbox" id="check" />
-              <label for="check">Answer 02</label>
-            </div>
-            <div class="vote-option checked">
-              <input type="checkbox" id="check" checked />
-              <label for="check">Answer 03</label>
-            </div>
-            <div class="vote-option">
-              <input type="checkbox" id="check" />
-              <label for="check">Answer 04</label>
-            </div>
-          </div>
-          <div class="button">
-            <button class="result-button"></button>
           </div>
         </section>
       </article>
@@ -283,13 +294,11 @@
             "none";
           document.querySelectorAll(".inner-close-button")[0].style.display =
             "inline-block";
-          document.querySelectorAll(".bg")[0].style.height = "364px";
         } else {
           document.querySelectorAll(".inner-open-button")[0].style.display =
             "inline-block";
           document.querySelectorAll(".inner-close-button")[0].style.display =
             "none";
-          document.querySelectorAll(".bg")[0].style.height = "305px";
         }
       });
     </script>

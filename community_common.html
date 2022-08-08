@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>community-common</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/community.css" />
     <link rel="stylesheet" type="text/css" href="./css/community_common.css" />
   </head>
   <body>
@@ -71,7 +72,7 @@
         <a href="/" target="_blank" class="sns-icon youtube"></a>
         <a href="/" target="_blank" class="sns-icon twitter"></a>
       </div>
-      <div>
+      <div class="links">
         <a href="/" target="_self" class="logout">LOGOUT</a>
       </div>
     </div>
@@ -92,46 +93,48 @@
         <div class="star-bg">
           <div class="prince-image"></div>
           <div class="user-content">
-            <div class="status-bar">
-              <div class="info">
-                <div class="info-left">
-                  <div class="user">
-                    <div class="user-image">
-                      <img
-                        src="image/desktop/user_default.png"
-                        alt="user image"
-                      />
+            <div class="status-bar-wrapper">
+              <div class="status-bar">
+                <div class="info">
+                  <div class="info-left">
+                    <div class="user">
+                      <div class="user-image">
+                        <img
+                          src="image/desktop/user_default.png"
+                          alt="user image"
+                        />
+                      </div>
+                      <p class="user-name">youngkun</p>
                     </div>
-                    <p class="user-name">youngkun</p>
+                    <div class="ruby">
+                      <div class="ruby-image"></div>
+                      <div>CUBIC 12,500</div>
+                    </div>
                   </div>
-                  <div class="ruby">
-                    <div class="ruby-image"></div>
-                    <div>CUBIC 12,500</div>
+                  <div id="more-contents" class="info-right">
+                    <div class="info-button">
+                      <span class="icon wallet-icon"></span>
+                      <span>on</span>
+                    </div>
+                    <div class="info-button">
+                      <span class="icon invite-icon"></span>
+                      <span>Invite Code</span>
+                      <a class="point-bg-tag">COPY</a>
+                    </div>
+                  </div>
+                  <div id="more-button">
+                    <button class="inner-close-button"></button>
+                    <button class="inner-open-button"></button>
                   </div>
                 </div>
-                <div id="more-contents" class="info-right">
-                  <div class="info-button">
-                    <span class="icon wallet-icon"></span>
-                    <span>on</span>
-                  </div>
-                  <div class="info-button">
-                    <span class="icon invite-icon"></span>
-                    <span>Invite Code</span>
-                    <a class="point-bg-tag">COPY</a>
-                  </div>
+                <hr />
+                <div class="button-wrapper">
+                  <p class="only-desktop">
+                    HYPER Cubic can be earned by game and exchanged for HYCO.
+                  </p>
+                  <button class="gameinfo-button mobile"></button>
+                  <button class="game-button"></button>
                 </div>
-                <div id="more-button">
-                  <button class="inner-close-button"></button>
-                  <button class="inner-open-button"></button>
-                </div>
-              </div>
-              <hr />
-              <div class="button-wrapper">
-                <p class="only-desktop">
-                  HYPER Cubic can be earned by game and exchanged for HYCO.
-                </p>
-                <button class="gameinfo-button mobile"></button>
-                <button class="game-button"></button>
               </div>
             </div>
           </div>
@@ -292,7 +295,7 @@
             </div>
           </div>
         </section>
-        <div class="pagination">
+        <div class="pagination center">
           <a href="#">prev</a>
           <a href="#">1</a>
           <a href="#" class="active">2</a>

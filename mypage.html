@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mypage</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/mypage_common.css" />
     <link rel="stylesheet" type="text/css" href="./css/mypage.css" />
   </head>
   <body>
@@ -71,7 +72,7 @@
         <a href="/" target="_blank" class="sns-icon youtube"></a>
         <a href="/" target="_blank" class="sns-icon twitter"></a>
       </div>
-      <div>
+      <div class="links">
         <a href="/" target="_self" class="logout">LOGOUT</a>
       </div>
     </div>
@@ -96,78 +97,80 @@
         </div>
       </div>
       <section>
-        <div class="status-bar">
-          <div class="breadcrumb">
-            <div class="breadcrumb-level">
-              <div class="circle-icon"></div>
-              PRINCE of Arkria
+        <div class="status-bar-wrapper">
+          <div class="status-bar">
+            <div class="breadcrumb">
+              <span class="breadcrumb-level">
+                <span class="circle-icon"></span>
+                PRINCE of Arkria
+              </span>
+              <span class="breadcrumb-level">>></span>
+              <span class="breadcrumb-level">
+                <span class="mypage-title"></span>
+              </span>
             </div>
-            <div>>></div>
-            <div>
-              <div class="mypage-title"></div>
-            </div>
-          </div>
-          <hr />
-          <div class="info">
-            <div class="info-left">
-              <div class="user">
-                <div class="user-image">
-                  <img src="image/desktop/user_img.png" alt="user image" />
-                </div>
-                <div>
-                  <p class="user-name">youngkun</p>
-                  <div class="info-buttons mobile">
-                    <div class="info-button">
-                      <span class="icon pass-icon"></span>
-                      <span>PASS</span>
+            <hr class="only-desktop" />
+            <div class="info">
+              <div class="info-left">
+                <div class="user">
+                  <div class="user-image">
+                    <img src="image/desktop/user_img.png" alt="user image" />
+                  </div>
+                  <div class="user-name-wrapper">
+                    <p class="user-name">YOUNGKUN</p>
+                    <div class="info-buttons mobile">
+                      <div class="info-button">
+                        <span class="icon pass-icon"></span>
+                        <span>PASS</span>
+                      </div>
+                      <div class="info-button">NFT HOLDER</div>
                     </div>
-                    <div class="info-button">NFT HOLDER</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="info-right">
-              <div class="info-button only-desktop">
-                <span class="icon pass-icon"></span>
-                <span>PASS</span>
+              <div class="info-right">
+                <div class="info-button only-desktop">
+                  <span class="icon pass-icon"></span>
+                  <span>PASS</span>
+                </div>
+                <div class="info-button only-desktop">NFT HOLDER</div>
+                <div class="info-button">
+                  <span class="icon wallet-icon"></span>
+                  <span>on</span>
+                </div>
               </div>
-              <div class="info-button only-desktop">NFT HOLDER</div>
-              <div class="info-button">
-                <span class="icon wallet-icon"></span>
-                <span>on</span>
+            </div>
+            <hr class="only-desktop" />
+            <div class="user-info-wrapper">
+              <div class="user-info">
+                <span class="email-icon user-info-icon"></span>
+                <span class="user-info-text">princeofarkria@domain.com</span>
               </div>
+              <div class="user-info">
+                <span class="discode-icon user-info-icon"></span>
+                <span class="user-info-text">Link your DISCORD ID</span>
+                <span class="point-bg-tag connect">Connect</span>
+              </div>
+              <div class="user-info">
+                <span class="w-wallet-icon user-info-icon"></span>
+                <span class="user-info-text">Link your WALLET</span>
+                <span class="point-bg-tag connect">Connect</span>
+              </div>
+              <hr class="only-desktop" />
+              <div class="ruby">
+                <div class="ruby-image"></div>
+                <div>CUBIC 12,500</div>
+                <div class="point-bg-tag history-tag">EARNING HISTORY</div>
+              </div>
+              <hr class="only-desktop" />
+              <div class="bg-tag">
+                <span class="icon invite-icon"></span>
+                <span>sf92esdk4#@fjcd!!</span>
+                <a class="point-bg-tag copy">COPY</a>
+              </div>
+              <hr />
+              <button class="logout-button"></button>
             </div>
-          </div>
-          <hr />
-          <div class="user-info-wrapper">
-            <div class="user-info">
-              <span class="email-icon user-info-icon"></span>
-              <span class="user-info-text">princeofarkria@domain.com</span>
-            </div>
-            <div class="user-info">
-              <span class="discode-icon user-info-icon"></span>
-              <span class="user-info-text">Link your DISCORD ID</span>
-              <span class="point-bg-tag connect">Connect</span>
-            </div>
-            <div class="user-info">
-              <span class="w-wallet-icon user-info-icon"></span>
-              <span class="user-info-text">Link your WALLET</span>
-              <span class="point-bg-tag connect">Connect</span>
-            </div>
-            <hr />
-            <div class="ruby">
-              <div class="ruby-image"></div>
-              <div>CUBIC 12,500</div>
-              <div class="point-bg-tag history">EARNING HISTORY</div>
-            </div>
-            <hr />
-            <div class="bg-tag">
-              <span class="icon invite-icon"></span>
-              <span>sf92esdk4#@fjcd!!</span>
-              <a class="point-bg-tag copy">COPY</a>
-            </div>
-            <hr />
-            <button class="logout-button"></button>
           </div>
         </div>
       </section>
@@ -200,7 +203,7 @@
           </p>
           <div class="buttons">
             <button class="modal-close">No, thanks!</button>
-            <button>
+            <button class="modal-ok">
               <span class="discode-active-icon"></span>Connect DISCORD
             </button>
           </div>
@@ -208,6 +211,23 @@
       </div>
     </div>
     <script>
+      const main = document.getElementsByTagName("main")[0];
+      const bg = document
+        .getElementsByClassName("bg")[0]
+        .getBoundingClientRect();
+      const absoluteBox = document
+        .getElementsByTagName("section")[0]
+        .getBoundingClientRect();
+      const absoluteBoxHeight =
+        document.getElementsByTagName("section")[0].offsetHeight;
+      const overflowHeight =
+        absoluteBoxHeight - (absoluteBox.top - bg.bottom) * -1;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const wrapperHeight = main.offsetHeight;
+        main.style.height = wrapperHeight + overflowHeight + "px";
+      });
+
       const menuIcon = document.getElementById("menu-icon");
       const close = document.getElementsByClassName("close-icon")[0];
       const clickedClass = "clicked";
@@ -225,7 +245,6 @@
       const modalClose = document.getElementsByClassName("modal-close")[0];
 
       connectButton.onclick = () => {
-        console.log("324234");
         modal.style.display = "flex";
       };
       modalClose.onclick = () => {

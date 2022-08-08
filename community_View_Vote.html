@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>community vote</title>
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/community.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -77,7 +78,7 @@
         <a href="/" target="_blank" class="sns-icon youtube"></a>
         <a href="/" target="_blank" class="sns-icon twitter"></a>
       </div>
-      <div>
+      <div class="links">
         <a href="/" target="_self" class="logout">LOGOUT</a>
       </div>
     </div>
@@ -100,57 +101,62 @@
         <div class="star-bg">
           <div class="prince-image"></div>
           <div class="user-content">
-            <div class="status-bar">
-              <div class="info">
-                <div class="info-left">
-                  <div class="user">
-                    <div class="user-image">
-                      <img src="image/desktop/user_img.png" alt="user image" />
-                    </div>
-                    <div>
-                      <p class="user-name">youngkun</p>
-                      <div class="info-buttons mobile">
-                        <div class="info-button">
-                          <span class="icon pass-icon"></span>
-                          <span>PASS</span>
+            <div class="status-bar-wrapper">
+              <div class="status-bar">
+                <div class="info">
+                  <div class="info-left">
+                    <div class="user">
+                      <div class="user-image">
+                        <img
+                          src="image/desktop/user_img.png"
+                          alt="user image"
+                        />
+                      </div>
+                      <div>
+                        <p class="user-name">youngkun</p>
+                        <div class="info-buttons mobile">
+                          <div class="info-button">
+                            <span class="icon pass-icon"></span>
+                            <span>PASS</span>
+                          </div>
+                          <div class="info-button">NFT HOLDER</div>
                         </div>
-                        <div class="info-button">NFT HOLDER</div>
                       </div>
                     </div>
+                    <div class="ruby">
+                      <div class="ruby-image"></div>
+                      <div><span class="only-desktop">CUBIC</span> 12,500</div>
+                    </div>
                   </div>
-                  <div class="ruby">
-                    <div class="ruby-image"></div>
-                    <div><span class="only-desktop">CUBIC</span> 12,500</div>
+                  <div id="more-contents" class="info-right">
+                    <div class="info-button only-desktop">
+                      <span class="icon pass-icon"></span>
+                      <span>PASS</span>
+                    </div>
+                    <div class="info-button only-desktop">NFT HOLDER</div>
+                    <div class="info-button">
+                      <span class="icon wallet-icon"></span>
+                      <span>on</span>
+                    </div>
+                    <div class="info-button">
+                      <span class="icon invite-icon"></span>
+                      <span>Invite Code</span>
+                      <a class="point-bg-tag">COPY</a>
+                    </div>
+                  </div>
+                  <div id="more-button">
+                    <button class="inner-close-button"></button>
+                    <button class="inner-open-button"></button>
                   </div>
                 </div>
-                <div id="more-contents" class="info-right">
-                  <div class="info-button only-desktop">
-                    <span class="icon pass-icon"></span>
-                    <span>PASS</span>
-                  </div>
-                  <div class="info-button only-desktop">NFT HOLDER</div>
-                  <div class="info-button">
-                    <span class="icon wallet-icon"></span>
-                    <span>on</span>
-                  </div>
-                  <div class="info-button">
-                    <span class="icon invite-icon"></span>
-                    <span>Invite Code</span>
-                    <a class="point-bg-tag">COPY</a>
-                  </div>
+                <hr />
+                <div class="button-wrapper">
+                  <p class="only-desktop">
+                    HYPER Cubic can be earned by game and exchanged for HYCO.
+                  </p>
+                  <button class="gameinfo-button mobile"></button>
+                  <button class="game-button"></button>
                 </div>
-                <div id="more-button">
-                  <button class="inner-close-button"></button>
-                  <button class="inner-open-button"></button>
-                </div>
-              </div>
-              <hr />
-              <div class="button-wrapper">
-                <p class="only-desktop">
-                  HYPER Cubic can be earned by game and exchanged for HYCO.
-                </p>
-                <button class="gameinfo-button mobile"></button>
-                <button class="game-button"></button>
               </div>
             </div>
           </div>
@@ -162,8 +168,8 @@
             <span class="breadcrumb-level"
               ><span class="circle-icon"></span>PRINCE of Arkria
             </span>
-            <span>>></span>
-            <span
+            <span class="breadcrumb-level">>></span>
+            <span class="breadcrumb-level"
               ><img
                 class="community-title"
                 src="image/desktop/community_tit.png"
@@ -193,108 +199,112 @@
           </div>
         </section>
         <hr class="mobile" />
-        <section class="box-content status-bar">
-          <div class="box-content-title">
-            <div>
-              <div class="date">
-                <span class="bg-tag">From</span>
-                <span>01 / AUG / 2022</span>
+        <section class="box-content">
+          <div class="status-bar-wrapper">
+            <div class="status-bar">
+              <div class="box-content-title">
+                <div>
+                  <div class="date">
+                    <span class="bg-tag">From</span>
+                    <span>01 / AUG / 2022</span>
+                  </div>
+                  <div class="date">
+                    <span class="bg-tag">To</span>
+                    <span>31 / AUG / 2022</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="discord-button"></div>
+                  <div class="twitter-button"></div>
+                </div>
               </div>
-              <div class="date">
-                <span class="bg-tag">To</span>
-                <span>31 / AUG / 2022</span>
+              <hr />
+              <p>
+                In the wide world of Web3, hacking attacks are far from the only
+                threat you need to worry about with regard to the security of
+                your assets. For some, particularly for those dealing with
+                portfolios totaling in the millions, the biggest threat can be
+                the market itself. This is particularly true in the case of
+                financial entities in Web3. Since its foundation in 2012,
+                Singapore-based crypto hedge fund Three Arrows Capital (3AC) has
+                amassed a portfolio of digital assets valued at over $10 billion
+                during the peak of 2021’s bull market.
+              </p>
+              <hr />
+              <div class="vote-options">
+                <div class="vote-option">
+                  <div>
+                    <input type="checkbox" id="check" />
+                  </div>
+                  <div class="vote-option-image">
+                    <img src="image/desktop/user_default.png" alt="" />
+                  </div>
+                  <div class="vote-option-text">
+                    <div class="rate-bg only-desktop" style="width: 32%"></div>
+                    What if we didn't have no pop If the popsong writers just
+                    gave up
+                  </div>
+                  <div class="vote-option-rate">
+                    <div class="only-desktop">32%</div>
+                    <div class="rate-bg mobile" style="width: 32%">32%</div>
+                  </div>
+                </div>
+                <div class="vote-option selected">
+                  <div>
+                    <input type="checkbox" id="check" />
+                  </div>
+                  <div class="vote-option-image">
+                    <img src="image/desktop/user_default.png" alt="" />
+                  </div>
+                  <div class="vote-option-text">
+                    <div class="rate-bg only-desktop" style="width: 35%"></div>
+                    What if we didn't have no pop If the popsong writers just
+                    gave up
+                  </div>
+                  <div class="vote-option-rate">
+                    <div class="only-desktop">35%</div>
+                    <div class="rate-bg mobile" style="width: 35%">35%</div>
+                  </div>
+                </div>
+                <div class="vote-option">
+                  <div>
+                    <input type="checkbox" id="check" />
+                  </div>
+                  <div class="vote-option-image">
+                    <img src="image/desktop/user_default.png" alt="" />
+                  </div>
+                  <div class="vote-option-text">
+                    <div class="rate-bg only-desktop" style="width: 13%"></div>
+                    What if we didn't have no pop If the popsong writers just
+                    gave up
+                  </div>
+                  <div class="vote-option-rate">
+                    <div class="only-desktop">13%</div>
+                    <div class="rate-bg mobile" style="width: 13%">13%</div>
+                  </div>
+                </div>
+                <div class="vote-option">
+                  <div>
+                    <input type="checkbox" id="check" />
+                  </div>
+                  <div class="vote-option-image">
+                    <img src="image/desktop/user_default.png" alt="" />
+                  </div>
+                  <div class="vote-option-text">
+                    <div class="rate-bg only-desktop" style="width: 20%"></div>
+                    What if we didn't have no pop If the popsong writers just
+                    gave up
+                  </div>
+                  <div class="vote-option-rate">
+                    <div class="only-desktop">20%</div>
+                    <div class="rate-bg mobile" style="width: 20%">20%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="button">
+                <button class="vote-button"></button>
               </div>
             </div>
-            <div>
-              <div class="discord-button"></div>
-              <div class="twitter-button"></div>
-            </div>
-          </div>
-          <hr />
-          <p>
-            In the wide world of Web3, hacking attacks are far from the only
-            threat you need to worry about with regard to the security of your
-            assets. For some, particularly for those dealing with portfolios
-            totaling in the millions, the biggest threat can be the market
-            itself. This is particularly true in the case of financial entities
-            in Web3. Since its foundation in 2012, Singapore-based crypto hedge
-            fund Three Arrows Capital (3AC) has amassed a portfolio of digital
-            assets valued at over $10 billion during the peak of 2021’s bull
-            market.
-          </p>
-          <hr />
-          <div class="vote-options">
-            <div class="vote-option">
-              <div>
-                <input type="checkbox" id="check" />
-              </div>
-              <div class="vote-option-image">
-                <img src="image/desktop/user_default.png" alt="" />
-              </div>
-              <div class="vote-option-text">
-                <div class="rate-bg only-desktop" style="width: 32%"></div>
-                What if we didn't have no pop If the popsong writers just gave
-                up
-              </div>
-              <div class="vote-option-rate">
-                <div class="only-desktop">32%</div>
-                <div class="rate-bg mobile" style="width: 32%">32%</div>
-              </div>
-            </div>
-            <div class="vote-option selected">
-              <div>
-                <input type="checkbox" id="check" />
-              </div>
-              <div class="vote-option-image">
-                <img src="image/desktop/user_default.png" alt="" />
-              </div>
-              <div class="vote-option-text">
-                <div class="rate-bg only-desktop" style="width: 35%"></div>
-                What if we didn't have no pop If the popsong writers just gave
-                up
-              </div>
-              <div class="vote-option-rate">
-                <div class="only-desktop">35%</div>
-                <div class="rate-bg mobile" style="width: 35%">35%</div>
-              </div>
-            </div>
-            <div class="vote-option">
-              <div>
-                <input type="checkbox" id="check" />
-              </div>
-              <div class="vote-option-image">
-                <img src="image/desktop/user_default.png" alt="" />
-              </div>
-              <div class="vote-option-text">
-                <div class="rate-bg only-desktop" style="width: 13%"></div>
-                What if we didn't have no pop If the popsong writers just gave
-                up
-              </div>
-              <div class="vote-option-rate">
-                <div class="only-desktop">13%</div>
-                <div class="rate-bg" style="width: 13%">13%</div>
-              </div>
-            </div>
-            <div class="vote-option">
-              <div>
-                <input type="checkbox" id="check" />
-              </div>
-              <div class="vote-option-image">
-                <img src="image/desktop/user_default.png" alt="" />
-              </div>
-              <div class="vote-option-text">
-                <div class="rate-bg only-desktop" style="width: 20%"></div>
-                What if we didn't have no pop If the popsong writers just gave
-                up
-              </div>
-              <div class="vote-option-rate">
-                <div class="only-desktop">20%</div>
-                <div class="rate-bg mobile" style="width: 20%">20%</div>
-              </div>
-            </div>
-          </div>
-          <div class="button">
-            <button class="vote-button"></button>
           </div>
         </section>
       </article>
@@ -323,21 +333,21 @@
       </div>
     </footer>
     <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close-icon")[0];
+      const clickedClass = "clicked";
+      const menu = document.getElementById("menu");
+
+      menuIcon.onclick = () => {
+        menu.classList.toggle(clickedClass);
+      };
+      close.onclick = () => {
+        menu.classList.remove("clicked");
+      };
+
       const moreButton = document.getElementById("more-button");
 
       moreButton.addEventListener("click", function (event) {
-        const menuIcon = document.getElementById("menu-icon");
-        const close = document.getElementsByClassName("close-icon")[0];
-        const clickedClass = "clicked";
-        const menu = document.getElementById("menu");
-
-        menuIcon.onclick = () => {
-          menu.classList.toggle(clickedClass);
-        };
-        close.onclick = () => {
-          menu.classList.remove("clicked");
-        };
-
         const moreButton = document.getElementById("more-button");
         const moreContents = document.getElementById("more-contents");
         const moreClickedClass = "clicked";
