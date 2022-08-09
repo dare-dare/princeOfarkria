@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>main</title>
-    <link rel="stylesheet" type="text/css" href="./css/main_fix.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main_fix_markup.css" />
     <link rel="stylesheet" type="text/css" href="./css/common.css" />
   </head>
   <body>
@@ -28,7 +28,8 @@
         width: 30% !important;
       "
     >
-      <option value="main_fix.html" selected>Main_fix</option>
+      <option value="main_fix.html">Main_fix</option>
+      <option value="main_fix_markup.html" selected>Main_fix_markup</option>
       <option value="main_fix_menu_before.html">Main_fix_menu_before</option>
       <option value="community_before_Login.html">
         community_before_Login
@@ -90,11 +91,11 @@
       </nav>
       <section class="bg">
         <div class="star-bg">
-          <div class="center-cube">
-            <div class="left-cube">
-              <div class="line"></div>
+          <div class="line">
+            <div class="center-cube">
+              <div class="left-cube"></div>
+              <div class="right-cube"></div>
             </div>
-            <div class="right-cube"></div>
           </div>
           <div class="contents">
             <div class="welcome-title"></div>
@@ -119,7 +120,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="just-play">
         <div class="play-text">
           <img src="image/desktop/cnt_tit_01.png" alt="JUST ENJOY! PLAY NOW!" />
         </div>
@@ -176,6 +177,25 @@
       close.onclick = () => {
         menu.classList.remove("clicked");
       };
+
+      document.addEventListener("scroll", (event) => {
+        const justPlay = document.getElementsByClassName("just-play")[0];
+        const community = document.getElementsByClassName("community")[0];
+        const gameInfo = document.getElementsByClassName("game-info")[0];
+        let scrollBottom = window.scrollY + window.innerHeight;
+
+        if (scrollBottom > justPlay.offsetTop) {
+          justPlay.style.opacity = "1";
+        }
+        if (scrollBottom > community.offsetTop + 100) {
+          community.style.opacity = "1";
+          community.classList.add("show");
+        }
+        if (scrollBottom > gameInfo.offsetTop + 200) {
+          gameInfo.style.opacity = "1";
+          gameInfo.classList.add("show");
+        }
+      });
     </script>
   </body>
 </html>

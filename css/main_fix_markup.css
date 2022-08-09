@@ -39,10 +39,6 @@ section {
   background: url("../image/desktop/Ellipse_line.png") center no-repeat;
   background-size: contain;
   z-index: 20;
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   height: 100%;
   width: 100vw;
 }
@@ -225,6 +221,9 @@ section {
   .bg {
     min-height: 568px;
   }
+  .line {
+    height: 80%;
+  }
   .center-cube {
     width: 147px;
     height: 158.5px;
@@ -260,5 +259,37 @@ section {
   }
   .star-bg > .contents {
     top: 40%;
+  }
+}
+
+section:not(.bg) {
+  opacity: 0;
+  transition: all 3s;
+}
+section.play-text {
+  opacity: 0;
+  transition: all 1s;
+}
+.show > .contents > .number-icon,
+.show > .contents > .text {
+  animation: fadeInUp 1s;
+}
+.show > .contents > .shadow-image,
+.show > .contents > .phone-image {
+  animation: fadeInUp 1s;
+}
+.show > .contents > .community-button,
+.show > .contents > .game-start-button {
+  animation: fadeInUp 5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
   }
 }
