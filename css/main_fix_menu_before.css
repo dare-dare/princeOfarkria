@@ -6,10 +6,6 @@ section {
   align-items: center;
   justify-content: center;
 }
-section:not(.bg) {
-  opacity: 0;
-  transition: all 3s;
-}
 .contents {
   display: flex;
   align-items: center;
@@ -19,73 +15,26 @@ section:not(.bg) {
 }
 .contents > .text {
   font-family: Inter;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.15;
+  line-height: 1.6;
   letter-spacing: normal;
   text-align: left;
+  color: #bdbdbd;
   max-width: 774px;
-  margin-top: 42px;
 }
 .text > p + p {
   margin-top: 40px;
 }
-
 .bg {
-  background: url("../image/desktop/spot_bg.png") top center no-repeat;
+  background: url("../image/desktop/spot_main_img.png") top center no-repeat;
   background-size: cover;
   position: relative;
   height: 1300px;
 }
-.line {
-  background: url("../image/desktop/Ellipse_line.png") center no-repeat;
-  background-size: contain;
-  z-index: 20;
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 1300px;
-  width: 100%;
-}
-.center-cube {
-  background: url("../image/desktop/cube_03.png") top center no-repeat;
-  background-size: contain;
-  width: 833px;
-  height: 898px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-}
-.left-cube {
-  background: url("../image/desktop/cube_01.png") top center no-repeat;
-  background-size: contain;
-
-  width: 292.8px;
-  height: 292.8px;
-  position: absolute;
-  bottom: 40%;
-  left: -455px;
-  transform: translateY(50%);
-  z-index: 20;
-}
-.right-cube {
-  background: url("../image/desktop/cube_02.png") top center no-repeat;
-  background-size: contain;
-  width: 162.6px;
-  height: 179.5px;
-
-  position: absolute;
-  top: 0;
-  right: -348px;
-  z-index: 20;
-}
-.star-bg > .contents {
+.bg > .contents {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -98,35 +47,9 @@ section:not(.bg) {
   background: url("../image/desktop/Welcome_title.png") top center no-repeat;
   background-size: contain;
 }
-.prince-img {
-  background: url("../image/desktop/Prince_all.png") top center no-repeat;
-  background-size: contain;
-  width: 809px;
-  height: 677.9px;
-  margin-top: 20px;
-
-  position: relative;
-}
 .enter-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 318px 0 188px;
 }
-.star-bg > .contents > .text {
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.6;
-  letter-spacing: normal;
-  text-align: left;
-  color: #bdbdbd;
-  margin-top: -60px;
-  z-index: 30;
-}
-
 .community {
   background: url("../image/desktop/element_bg.png") center no-repeat;
   background-size: cover;
@@ -193,19 +116,14 @@ section:not(.bg) {
     background-size: contain;
     width: 80%;
   }
-
-  .center-cube {
-    width: 733px;
-    height: 798px;
-  }
-
-  .prince-img {
-    width: 709px;
-    height: 577.9px;
-  }
 }
 
 @media (max-width: 640px) {
+  .bg {
+    background: url("../image/mobile/spot_main_img_m.png") top center no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
   section:not(.bg),
   .text {
     display: none;
@@ -228,43 +146,45 @@ section:not(.bg) {
   footer {
     padding: 0 0 34px !important;
   }
-  .bg {
-    min-height: 568px;
-  }
-  .center-cube {
-    width: 147px;
-    height: 158.5px;
-    top: 35%;
-  }
-  .left-cube {
-    width: 140.3px;
-    height: 140.3px;
-    left: -50%;
-    bottom: -50%;
-    transform: translateX(-50%);
-  }
-  .right-cube {
-    width: 79px;
-    height: 79px;
-    right: -50%;
-    top: -50%;
-    transform: translate(50%, 50%);
-  }
-  .prince-img {
-    width: 289px;
-    height: 243px;
-  }
   .welcome-title {
-    position: absolute;
-    bottom: 0;
-    z-index: 30;
     width: 252px;
   }
   .enter-button {
-    bottom: -110px;
-    top: unset;
+    margin: 40px 0 0;
   }
-  .star-bg > .contents {
-    top: 40%;
+  .bg > .contents {
+    top: 70%;
+  }
+}
+
+section:not(.bg) {
+  opacity: 0;
+  transition: all 3s;
+}
+section.play-text {
+  opacity: 0;
+  transition: all 1s;
+}
+.show > .contents > .number-icon,
+.show > .contents > .text {
+  animation: fadeInUp 1s;
+}
+.show > .contents > .shadow-image,
+.show > .contents > .phone-image {
+  animation: fadeInUp 1s;
+}
+.show > .contents > .community-button,
+.show > .contents > .game-start-button {
+  animation: fadeInUp 5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
   }
 }
