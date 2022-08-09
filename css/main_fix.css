@@ -8,7 +8,7 @@ section {
 }
 section:not(.bg) {
   opacity: 0;
-  transition: all 2s;
+  transition: all 3s;
 }
 .contents {
   display: flex;

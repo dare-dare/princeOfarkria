@@ -6,6 +6,10 @@ section {
   align-items: center;
   justify-content: center;
 }
+section:not(.bg) {
+  opacity: 0;
+  transition: all 3s;
+}
 .contents {
   display: flex;
   align-items: center;
