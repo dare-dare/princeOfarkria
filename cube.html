@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/cube.css" />
+  </head>
+  <body>
+    <div id="menu">
+      <div class="close">
+        <div class="close-icon"></div>
+      </div>
+      <div class="menu-title">Community</div>
+      <hr />
+      <div class="menu-title">GAME</div>
+      <div class="menu-subtitle">Memory game</div>
+      <div class="menu-subtitle">Time attack</div>
+      <hr />
+      <div class="menu-title">MY PAGE</div>
+      <div class="menu-subtitle">Earning history</div>
+      <div class="menu-subtitle">connect discord</div>
+      <div class="menu-subtitle">connect wallet</div>
+      <div class="menu-subtitle">change password</div>
+      <hr />
+      <div class="menu-title">Service infomation</div>
+      <div class="menu-subtitle">Terms of service</div>
+      <div class="menu-subtitle">Privacy Policy</div>
+      <div class="menu-subtitle">Company Information</div>
+      <hr />
+      <div class="sns-icons">
+        <a href="/" target="_blank" class="sns-icon discord"></a>
+        <a href="/" target="_blank" class="sns-icon insta"></a>
+        <a href="/" target="_blank" class="sns-icon youtube"></a>
+        <a href="/" target="_blank" class="sns-icon twitter"></a>
+      </div>
+      <div class="links">
+        <a href="/" target="_self" class="logout">LOGOUT</a>
+      </div>
+    </div>
+    <main>
+      <nav>
+        <a href="/" target="_blank" class="nav-logo only-desktop"> </a>
+        <a class="back-icon mobile"></a>
+        <div class="nav-title mobile">LOGIN</div>
+        <div class="nav-right">
+          <div class="sns-icons">
+            <a href="/" target="_blank" class="sns-icon discord"></a>
+            <a href="/" target="_blank" class="sns-icon insta"></a>
+            <a href="/" target="_blank" class="sns-icon youtube"></a>
+            <a href="/" target="_blank" class="sns-icon twitter"></a>
+          </div>
+          <div id="menu-icon" class="menu-icon"></div>
+        </div>
+      </nav>
+      <div class="bg">
+        <section class="page-content">
+          <div class="status-bar-wrapper">
+            <div class="status-bar">
+              <div class="breadcrumb">
+                <div class="breadcrumb-level">
+                  <div class="circle-icon"></div>
+                  PRINCE of Arkria
+                </div>
+                <div class="breadcrumb-level">>></div>
+                <div class="breadcrumb-level">
+                  <div class="breadcrumb-title"></div>
+                </div>
+              </div>
+              <hr />
+              <div class="button-wrap">
+                <div class="content-title">LET'S GAME!</div>
+                <div class="buttons">
+                  <button>Memory Game</button>
+                  <button>Cube Click</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cube-wrap">
+            <div class="cube-title"></div>
+            <div class="circle-img">
+              <canvas id="layout" width="500" height="500"> </canvas>
+              <div class="cube-img">
+                <button class="cube-text"></button>
+              </div>
+            </div>
+            <div class="timer">
+              <div>
+                <div class="timer-number">00</div>
+                <div class="timer-text">Hours</div>
+              </div>
+              <div>:</div>
+              <div>
+                <div class="timer-number">00</div>
+                <div class="timer-text">Minutes</div>
+              </div>
+              <div>:</div>
+              <div>
+                <div class="timer-number">00</div>
+                <div class="timer-text">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      const main = document.getElementsByTagName("main")[0];
+      const bg = document
+        .getElementsByClassName("bg")[0]
+        .getBoundingClientRect();
+      const absoluteBox = document
+        .getElementsByClassName("page-content")[0]
+        .getBoundingClientRect();
+      const absoluteBoxHeight =
+        document.getElementsByClassName("page-content")[0].offsetHeight;
+      const overflowHeight =
+        absoluteBoxHeight - (absoluteBox.top - bg.bottom) * -1;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const wrapperHeight = main.offsetHeight;
+        main.style.height = wrapperHeight + overflowHeight + "px";
+      });
+
+      const menuIcon = document.getElementById("menu-icon");
+      const close = document.getElementsByClassName("close-icon")[0];
+      const clickedClass = "clicked";
+      const menu = document.getElementById("menu");
+
+      menuIcon.onclick = () => {
+        menu.classList.toggle(clickedClass);
+      };
+      close.onclick = () => {
+        menu.classList.remove("clicked");
+      };
+
+      const timerButton = document.getElementsByClassName("cube-text")[0];
+      const cricleImg = document.getElementsByClassName("circle-img")[0];
+      const ctx = document.getElementById("layout").getContext("2d");
+      let al = 0;
+      const start = 4.72;
+      const cw = ctx.canvas.width;
+      const ch = ctx.canvas.height;
+      let diff;
+      let sim;
+      // 타이머 지정 시간
+      const timerTime = 100;
+
+      function progressSim() {
+        cricleImg.classList.add("timer-mode");
+
+        diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2);
+        ctx.clearRect(0, 0, cw, ch);
+        ctx.lineWidth = 4;
+        ctx.fillStyle = "transparent";
+        ctx.strokeStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(252, 248, 210, start, diff / 10 + start, false);
+        ctx.stroke();
+        ctx.lineCap = "round";
+
+        if (al >= 100) {
+          clearTimeout(sim);
+          cricleImg.classList.remove("timer-mode");
+          cricleImg.classList.add("get-cube");
+
+          setTimeout(() => {
+            cricleImg.classList.remove("get-cube");
+            cricleImg.classList.add("end");
+          }, 1000);
+        }
+
+        al++;
+      }
+
+      timerButton.onclick = () => {
+        sim = setInterval(progressSim, timerTime);
+      };
+    </script>
+  </body>
+</html>
